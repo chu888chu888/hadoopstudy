@@ -1,0 +1,58 @@
+README
+
+STRUCTURE OF THE CODE
+  There are two folders, conf and script.
+  All configuration files are put under conf foler.
+    - conf/bind: Bind9
+    - conf/ntp: NTP server and client
+    - conf/ha: Heartbeat
+    
+  All executable scripts are in the script folder.
+    - ec2-hostname.sh
+      Update EC2 DNS hostname automatically. Described in step 5, recipe 2.
+    - namenode
+      Namenode resource agent. Described in step 5, recipe 10.
+    - elastic-ip
+      Elastic-IP resource agent. Described in "There's more...", recipe 10.
+
+CONFIGURE BIND9
+  We put all bind9 configuration files under conf/bind.
+  To configure bind9 on Amazon EC2,
+    - Replace your /etc/bind/named.conf.local and /etc/bind/named.conf.options with the same files under conf/bind.
+    - Put zone files (db.hbase-admin-cookbook.com & db.10) under /var/lib/bind
+    - Generate your secret key
+      $ dnssec-keygen -a HMAC-MD5 -b 512 -n USER your.domain.com.
+      this will create two files like this:
+        Kuser.hbase-admin-cookbook.com.+157+44141.key
+        Kuser.hbase-admin-cookbook.com.+157+44141.private
+      Replace secret key of named.conf.local to the content of generated private key.
+    - Change domain name to your domain name for all the configuration files
+    - Change IP of DNS server to your server address
+    - Change forwarder address to address of DNS of your EC2 region
+    - Restart bind9 by typing /etc/init.d/bind9 restart
+      You must increment the serial number every time you make changes to the zone file.
+
+CONFIGURE NTP
+  We put all NTP configuration files under conf/ntp.
+  To configure NTP server on Amazon EC2
+    - Use ntp.conf.server as template
+    - Replace NTP servers to public NTP servers of your location
+    - Put ntp.conf.server as /etc/ntp.conf
+    - Restart ntp daemon
+      /etc/init.d/ntp restart
+
+  To configure NTP client on Amazon EC2
+    - Use ntp.conf.client as template
+    - Replace server setting to IP address of your NTP server
+    - Replace restrict setting to IP address of your NTP server
+    - Put ntp.conf.client as /etc/ntp.conf
+    - Restart ntp daemon
+      /etc/init.d/ntp restart
+
+UPDATE DNS RECORD AFTER REBOOT OF EC2 INSTANCE
+  You will need to change DNS_KEY in script/ec2-hostname.sh to full path of our generated DNS private key
+  Also need to change DOMAIN in the script to your domain
+  Please under instruction of recipe 2, chapter 1
+
+INSTALLATION OF OCF RESOURCE AGENT
+  See step 6 & 7, recipe 10.

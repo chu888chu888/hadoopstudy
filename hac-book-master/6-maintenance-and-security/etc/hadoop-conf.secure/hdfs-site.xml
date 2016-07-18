@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+  <property>
+    <name>dfs.support.append</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>dfs.datanode.max.xcievers</name>
+    <value>4096</value>
+  </property>
+  <property>
+    <name>dfs.replication</name>
+    <value>2</value>
+  </property>
+  <property>
+    <name>dfs.name.dir</name>
+    <value>/usr/local/hadoop/var/dfs/name</value>
+  </property>
+  <property>
+    <name>dfs.permissions.supergroup</name>
+    <value>hadoop</value>
+  </property>
+  <property>
+    <name>dfs.webhdfs.enabled</name>
+    <value>false</value>
+  </property>
+
+  <!-- General HDFS security config -->
+  <property>
+    <name>dfs.block.access.token.enable</name>
+    <value>true</value>
+  </property>
+   
+  <!-- NameNode security config -->
+  <property>
+    <name>dfs.https.address</name>
+    <value>ip-10-168-46-11.us-west-1.compute.internal:50470</value>
+  </property>
+  <property>
+    <name>dfs.https.port</name>
+    <value>50470</value>
+  </property>
+  <property>
+    <name>dfs.namenode.keytab.file</name>
+    <value>/etc/hadoop/hadoop.keytab</value> <!-- path to the HDFS keytab -->
+  </property>
+  <property>
+    <name>dfs.namenode.kerberos.principal</name>
+    <value>hadoop/_HOST@HBASE-ADMIN-COOKBOOK.COM</value>
+  </property>
+  <property>
+    <name>dfs.namenode.kerberos.https.principal</name>
+    <value>host/_HOST@HBASE-ADMIN-COOKBOOK.COM</value>
+  </property>
+   
+  <!-- DataNode security config -->
+  <property>
+    <name>dfs.datanode.data.dir.perm</name>
+    <value>700</value>
+  </property>
+  <!-- secure setup requires privileged ports -->
+  <property>
+    <name>dfs.datanode.address</name>
+    <value>0.0.0.0:1004</value>
+  </property>
+  <property>
+    <name>dfs.datanode.http.address</name>
+    <value>0.0.0.0:1006</value>
+  </property>
+  <property>
+    <name>dfs.datanode.keytab.file</name>
+    <value>/etc/hadoop/hadoop.keytab</value> <!-- path to the HDFS keytab -->
+  </property>
+  <property>
+    <name>dfs.datanode.kerberos.principal</name>
+    <value>hadoop/_HOST@HBASE-ADMIN-COOKBOOK.COM</value>
+  </property>
+  <property>
+    <name>dfs.datanode.kerberos.https.principal</name>
+    <value>host/_HOST@HBASE-ADMIN-COOKBOOK.COM</value>
+  </property>
+
+</configuration>

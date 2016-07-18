@@ -1,0 +1,151 @@
+#!/bin/sh
+#
+# Resource script for HDFS NameNode
+#
+# Description: start/stop/monitor namenode
+#
+#	  OCF parameters are as below:
+#		none
+#
+
+#######################################################################
+# Initialization:
+
+: ${OCF_FUNCTIONS_DIR=${OCF_ROOT}/resource.d/heartbeat}
+. ${OCF_FUNCTIONS_DIR}/.ocf-shellfuncs
+
+#######################################################################
+
+usage() {
+  echo "Usage: $0 {start|stop|status|monitor|meta-data|validate-all}"
+}
+
+meta_data() {
+	cat <<END
+<?xml version="1.0"?>
+<!DOCTYPE resource-agent SYSTEM "ra-api-1.dtd">
+<resource-agent name="namenode">
+<version>0.1</version>
+
+<longdesc lang="en">
+This is a resource agent for NameNode. It manages HDFS namenode daemon.
+</longdesc>
+<shortdesc lang="en">Manage namenode daemon.</shortdesc>
+
+<parameters>
+</parameters>
+
+<actions>
+<action name="start" timeout="120" />
+<action name="stop" timeout="120" />
+<action name="status" depth="0" timeout="120" interval="120" />
+<action name="monitor" depth="0" timeout="120" interval="120" />
+<action name="meta-data" timeout="10" />
+<action name="validate-all" timeout="5" />
+</actions>
+</resource-agent>
+END
+}
+
+namenode_start() {
+    # if namenode is already started on this server, bail out early
+    namenode_status
+    if [ $? -eq 0 ]; then
+        ocf_log info "namenode is already running on this server, skip"
+        return $OCF_SUCCESS
+    fi
+
+    # start namenode on this server
+    ocf_log info "Starting namenode daemon..."
+    su - hadoop -c "${HADOOP_HOME}/bin/hadoop-daemon.sh start namenode"
+    # you also need to start datanode if you are using DNS switching instead of VIP
+    # EC2 does not support VIP, so comment out the previous command and uncomment the following command
+    # su - hadoop -c "${HADOOP_HOME}/bin/start-dfs.sh"
+    if [ $? -ne 0 ]; then
+        ocf_log err "Can not start namenode daemon."
+        return $OCF_ERR_GENERIC;
+    fi
+    sleep 1
+    return $OCF_SUCCESS
+}
+
+namenode_stop () {
+    # if namenode is not started on this server, bail out early
+    namenode_status
+    if [ $? -ne 0 ]; then
+        ocf_log info "namenode is not running on this server, skip"
+        return $OCF_SUCCESS
+    fi
+
+    # stop namenode on this server
+    ocf_log info "Stopping namenode daemon..."
+    su - hadoop -c "${HADOOP_HOME}/bin/hadoop-daemon.sh stop namenode"
+    # you also need to start datanode if you are using DNS switching instead of VIP
+    # EC2 does not support VIP, so comment out the previous command and uncomment the following command
+    # su - hadoop -c "${HADOOP_HOME}/bin/stop-dfs.sh"
+    if [ $? -ne 0 ]; then
+        ocf_log err "Can not stop namenode daemon."
+        return $OCF_ERR_GENERIC;
+    fi
+    sleep 1
+    return $OCF_SUCCESS
+}
+
+namenode_status () {
+    ocf_log info "monitor namenode"
+    su - hadoop -c "${JAVA_HOME}/bin/jps" | egrep -q "NameNode"
+    rc=$?
+    # grep will return true if namenode is running on this machine
+    if [ $rc -eq 0 ]; then
+        ocf_log info "Namenode is running"
+		return $OCF_SUCCESS
+	else
+        ocf_log info "Namenode is not running"
+		return $OCF_NOT_RUNNING
+	fi
+}
+
+namenode_validateAll () {
+	if [ -z "$JAVA_HOME" ]; then
+		ocf_log err "JAVA_HOME not set."
+		exit $OCF_ERR_INSTALLED
+	fi
+	if [ -z "$HADOOP_HOME" ]; then
+		ocf_log err "HADOOP_HOME not set."
+		exit $OCF_ERR_INSTALLED
+	fi
+	return $OCF_SUCCESS
+}
+
+
+# See how we were called.
+if [ $# -ne 1 ]; then
+  usage
+  exit $OCF_ERR_GENERIC
+fi
+
+namenode_validateAll
+
+case $1 in
+  meta-data)	meta_data
+			exit $OCF_SUCCESS
+			;;
+  usage)		usage
+			exit $OCF_SUCCESS
+			;;
+  *)		;;
+esac
+
+case $1 in
+  status|monitor)	namenode_status
+			;;
+  start)		namenode_start
+			;;
+  stop)			namenode_stop
+			;;
+  validate-all)		;;
+  *)			usage
+			exit $OCF_ERR_UNIMPLEMENTED
+			;;
+esac
+exit $?

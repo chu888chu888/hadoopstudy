@@ -1,0 +1,28 @@
+# enable pacemaker, without stonith
+crm yes
+
+# log where ?
+logfacility local0
+
+# warning of soon be dead
+warntime 10
+
+# declare a host (the other node) dead after:
+deadtime 20
+
+# dead time on boot (could take some time until net is up)
+initdead 120
+
+# time between heartbeats
+keepalive 2
+
+# the nodes
+node master1
+node master2
+
+# heartbeats, over dedicated replication interface!
+ucast eth0 master1 # ignored by master1 (owner of ip)
+ucast eth0 master2 # ignored by master2 (owner of ip)
+
+# ping the name server to assure we are online
+ping ns

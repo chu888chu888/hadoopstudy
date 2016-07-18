@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+/**
+ * Copyright 2010 The Apache Software Foundation
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<configuration>
+  <property>
+    <name>hbase.rootdir</name>
+    <value>hdfs://ip-10-168-46-11.us-west-1.compute.internal:8020/hbase</value>
+  </property>
+  <property>
+    <name>hbase.cluster.distributed</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hbase.tmp.dir</name>
+    <value>/usr/local/hbase/var</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.quorum</name>
+    <value>master1</value>
+  </property>
+  <property>
+    <name>hbase.regionserver.codecs</name>
+    <value>lzo,gz</value>
+  </property>
+  <property>
+    <name>zookeeper.znode.parent</name>
+    <value>/hbase</value>
+  </property>
+  <property>
+    <name>zookeeper.session.timeout</name>
+    <value>10000</value>
+  </property>
+  <!--
+  <property>
+    <name>hbase.replication</name>
+    <value>true</value>
+  </property>
+  -->
+
+  <!-- secure HBase: ahthentication -->
+  <property>
+    <name>hbase.regionserver.kerberos.principal</name>
+    <value>hadoop/_HOST@HBASE-ADMIN-COOKBOOK.COM</value>
+  </property>
+  <property>
+    <name>hbase.regionserver.keytab.file</name>
+    <value>/etc/hadoop/hadoop.keytab</value>
+  </property>
+  <property>
+    <name>hbase.master.kerberos.principal</name>
+    <value>hadoop/_HOST@HBASE-ADMIN-COOKBOOK.COM</value>
+  </property>
+  <property>
+    <name>hbase.master.keytab.file</name>
+    <value>/etc/hadoop/hadoop.keytab</value>
+  </property>
+
+  <property>
+    <name>hbase.security.authentication</name>
+    <value>kerberos</value> 
+  </property> 
+  <property>
+    <name>hbase.security.authorization</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>hbase.rpc.engine</name>
+    <value>org.apache.hadoop.hbase.ipc.SecureRpcEngine</value>
+  </property>
+  <property>
+    <name>hbase.coprocessor.region.classes</name>
+    <value>org.apache.hadoop.hbase.security.token.TokenProvider</value>
+  </property>
+</configuration>

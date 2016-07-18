@@ -1,0 +1,17 @@
+README
+
+Structure of the code
+  There are two directories: etc and script.
+
+  Secure Hadoop / HDFS configurations are in the etc directory.
+
+  Executable scripts are in the script folder.
+    - script/rolling-restart-rs.sh
+      Rolling restart region servers
+      Described in recipe 4 "Rolling restart"
+    - script/cluster-jps.sh
+      Show running Java processes on the cluster
+      Described in recipe 5 "Simple script to manage HBase processes"
+    - script/cluster-deploy.sh
+      Sync HBase installation across the cluster
+      Described in recipe 6 "Simple script to make deployment easier"

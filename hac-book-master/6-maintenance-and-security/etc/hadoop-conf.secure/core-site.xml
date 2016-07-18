@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+  <property>
+    <name>hadoop.tmp.dir</name>
+    <value>/usr/local/hadoop/var</value>
+  </property>
+  <property>
+    <name>fs.default.name</name>
+    <value>hdfs://ip-10-168-46-11.us-west-1.compute.internal:8020</value>
+  </property>
+
+  <property>
+    <name>hadoop.security.authentication</name>
+    <value>kerberos</value> <!-- A value of "simple" would disable security. -->
+  </property>
+   
+  <property>
+    <name>hadoop.security.authorization</name>
+    <value>true</value>
+  </property>
+</configuration>

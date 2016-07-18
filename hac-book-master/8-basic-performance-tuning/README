@@ -1,0 +1,13 @@
+README
+
+Structure of the code
+  There are only one folder, the script folder.
+
+  Executable scripts are in the script folder.
+    - script/topology.sh
+      Resolve DNS name to rack name mapping.
+      Described in recipe 2 'Using network topology script to make Hadoop rack awareness'
+
+    - script/topology.data
+      Holds the DNS name to rack name mapping data. Read by topology.sh to resolve the mapping.
+      Described in recipe 2 'Using network topology script to make Hadoop rack awareness'

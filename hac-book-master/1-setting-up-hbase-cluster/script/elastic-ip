@@ -1,0 +1,191 @@
+#!/bin/sh
+#
+# Resource script for attaching elastic IP
+#
+# Description: associate AWS Elastic IP to a running EC2 instance
+#
+#	  OCF parameters are as below:
+#		OCF_RESKEY_elastic_ip
+#
+
+#######################################################################
+# Initialization:
+
+: ${OCF_FUNCTIONS_DIR=${OCF_ROOT}/resource.d/heartbeat}
+. ${OCF_FUNCTIONS_DIR}/.ocf-shellfuncs
+
+#######################################################################
+
+usage() {
+  echo "Usage: $0 {start|stop|status|monitor|meta-data|validate-all}"
+}
+
+meta_data() {
+	cat <<END
+<?xml version="1.0"?>
+<!DOCTYPE resource-agent SYSTEM "ra-api-1.dtd">
+<resource-agent name="elastic-ip">
+<version>0.1</version>
+
+<longdesc lang="en">
+This is a resource agent for ElasticIP. It associates Amazon Elastic IP
+to a running EC2 instance.
+</longdesc>
+<shortdesc lang="en">Associate Elastic IP to a running EC2 instance</shortdesc>
+
+<parameters>
+<parameter name="elastic_ip" unique="1" required="1">
+<longdesc lang="en">
+The Elastic IP address to associate/disassociate
+</longdesc>
+<shortdesc lang="en">Elastic IP address</shortdesc>
+<content type="string" default="" />
+</parameter>
+
+</parameters>
+
+<actions>
+<action name="start" timeout="120" />
+<action name="stop" timeout="120" />
+<action name="status" depth="0" timeout="120" interval="120" />
+<action name="monitor" depth="0" timeout="120" interval="120" />
+<action name="meta-data" timeout="10" />
+<action name="validate-all" timeout="5" />
+</actions>
+</resource-agent>
+END
+}
+
+eip_start() {
+    # if EIP is already associated with this instance, bail out early
+    eip_status
+    if [ $? -eq 0 ]; then
+        ocf_log info "EIP is already running on this instance, skip"
+        return $OCF_SUCCESS
+    fi
+
+    # actually associate EIP with this instance
+    ocf_log info "Associate EIP with me ($instance_id)"
+    ec2-associate-address $eip -i $instance_id
+    if [ $? -ne 0 ]; then
+        ocf_log err "ec2-associate-address returned error"
+        return $OCF_ERR_GENERIC;
+    fi
+    sleep 1
+    return $OCF_SUCCESS
+}
+
+eip_stop () {
+    # do NOT actually stop EIP because start action do not need stop executing first
+    # and we don't want to stop EIP automatically
+    eip_status
+    if [ $? -ne 0 ]; then
+        ocf_log info "EIP is not running on this server, skip"
+        return $OCF_SUCCESS
+    fi
+
+    ocf_log info "Dis-associate EIP from me ($instance_id)"
+    ec2-disassociate-address $eip
+    if [ $? -ne 0 ]; then
+        ocf_log err "ec2-disassociate-address returned error"
+        return $OCF_ERR_GENERIC;
+    fi
+    sleep 1
+    return $OCF_SUCCESS
+}
+
+eip_status () {
+    ocf_log info "monitor EIP: $eip"
+    ec2-describe-addresses "$eip" | egrep -q "$instance_id"
+    rc=$?
+    # grep will return true if this ip is mapped to this instance
+    if [ $rc -eq 0 ]
+	then
+        ocf_log info "EIP is associated with me"
+		return $OCF_SUCCESS
+	else
+        ocf_log info "eip_status return code: $rc"
+        ocf_log info "EIP is not associated with me"
+		return $OCF_NOT_RUNNING
+	fi
+}
+
+eip_validateAll () {
+	if [ -z "$EC2_HOME" ]; then
+		ocf_log err "EC2_HOME not set."
+		exit $OCF_ERR_INSTALLED
+	fi
+	if [ -z "$EC2_PRIVATE_KEY" ]; then
+		ocf_log err "EC2_PRIVATE_KEY not set."
+		exit $OCF_ERR_INSTALLED
+	fi
+	if [ -z "$EC2_CERT" ]; then
+		ocf_log err "EC2_CERT not set."
+		exit $OCF_ERR_INSTALLED
+	fi
+	if [ -z "$JAVA_HOME" ]; then
+		ocf_log err "JAVA_HOME not set."
+		exit $OCF_ERR_INSTALLED
+	fi
+	if [ -z "$EC2_URL" ]; then
+		ocf_log err "EC2_URL not set."
+		exit $OCF_ERR_INSTALLED
+	fi
+	check_binary "ec2-associate-address"
+	check_binary "ec2-disassociate-address"
+	check_binary "ec2-describe-addresses"
+
+# Any subject is OK
+
+	return $OCF_SUCCESS
+}
+
+
+# 
+# See how we were called.
+#
+
+if
+  ( [ $# -ne 1 ] )
+then
+  usage
+  exit $OCF_ERR_GENERIC
+fi
+
+eip_validateAll
+
+case $1 in
+  meta-data)		meta_data
+			exit $OCF_SUCCESS
+			;;
+  usage)		usage
+			exit $OCF_SUCCESS
+			;;
+  *)			;;
+esac
+
+# parameters
+if 
+  [ -z "$OCF_RESKEY_elastic_ip" ]
+then
+  ocf_log err "Elastice IP address has to be given!"
+#  usage
+  exit $OCF_ERR_GENERIC
+fi
+
+eip=$OCF_RESKEY_elastic_ip
+instance_id=`wget -q -O - http://169.254.169.254/latest/meta-data/instance-id`
+
+case $1 in
+  status|monitor)	eip_status
+			;;
+  start)		eip_start
+			;;
+  stop)			eip_stop
+			;;
+  validate-all)		;;
+  *)			usage
+			exit $OCF_ERR_UNIMPLEMENTED
+			;;
+esac
+exit $?

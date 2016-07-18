@@ -1,0 +1,25 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "hbase-admin-cookbook.com" {
+	type master;
+	file "/var/lib/bind/db.hbase-admin-cookbook.com";
+	allow-update { key user.hbase-admin-cookbook.com.; };
+};
+
+zone "49.160.10.in-addr.arpa" {
+        type master;
+        notify no;
+        file "/var/lib/bind/db.10";
+     	allow-update { key user.hbase-admin-cookbook.com.; };
+};
+
+key user.hbase-admin-cookbook.com. {
+	algorithm HMAC-MD5;
+	secret "uvA7A0Pw86cI6SnnqJqokBxqsiyavYwP5G9Bx0j7ayqDpjCsF/qPYgKF qpcbI3bIhuDeJ9LMvb/lYNAZx5MaLQ==";
+};

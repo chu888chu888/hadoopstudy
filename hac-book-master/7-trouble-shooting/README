@@ -1,0 +1,33 @@
+README
+
+Structure of the code
+  There are only one folder, the script folder.
+
+  Executable scripts are in the script folder.
+    - script/ec2-running-hosts.sh
+      Get IP address, DNS and hostname of running EC2 instances.
+      Described in recipe 8 '“hostname can't be null” error when starting HBase on EC2'
+      
+    - script/update-ec2-hosts.sh
+      SSH into a server and overwrite /etc/hosts file on it with the specified hosts file.
+      Described in recipe 8 '“hostname can't be null” error when starting HBase on EC2'
+
+    - script/update-ec2-private-hosts.sh
+      Update EC2 private internal DNS name in /etc/hosts file for every running EC2 instance
+      Described in recipe 8 '“hostname can't be null” error when starting HBase on EC2'
+
+    - script/update-ec2-hmaster-hosts.sh
+      Append old DNS name to /etc/hosts file and then update /etc/hosts file on HBase master node
+      Described in recipe 8 '“hostname can't be null” error when starting HBase on EC2'
+
+    - script/update-ec2-public-hosts.sh
+      Update EC2 public DNS name in /etc/hosts file for every running EC2 instance on the local PC
+      Described in recipe 8 '“hostname can't be null” error when starting HBase on EC2'
+
+    - script/hosts.template
+      The template of EC2 instances' /etc/hosts file.
+      Described in recipe 8 '“hostname can't be null” error when starting HBase on EC2'
+
+    - script/hosts.local
+      The template of local PC's /etc/hosts file.
+      Described in recipe 8 '“hostname can't be null” error when starting HBase on EC2'

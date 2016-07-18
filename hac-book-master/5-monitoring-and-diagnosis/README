@@ -1,0 +1,51 @@
+README
+
+Structure of the code
+  There are three folders, etc, java and script.
+
+  etc is the folder contains configuration files
+    The following three files are described in recipe 2 "Setting up Ganglia to monitor HBase cluster"
+    - etc/ganglia/gmond.conf: Ganglia Monitoring Daemon setting
+    - etc/ganglia/gmetad.conf: Ganglia Meta Daemon setting
+    - etc/hbase/hadoop-metrics.properties: HBase metrics setting
+
+    The following files are described in recipe 3, 4 and 5
+    - etc/nagios/contacts_nagios2.cfg: Nagios contacts setting
+    - etc/nagios/hostgroups_nagios2.cfg: Nagios host group setting
+    - etc/nagios/hosts_nagios2.cfg: Nagios host setting
+    - etc/nagios/services_nagios2.cfg: Nagios service setting
+    - etc/nagios/nrpe.cfg.master: Nagios NRPE setting for HBase master node
+    - etc/nagios/nrpe.cfg.slave: Nagios NRPE setting for HBase slave nodes
+    
+  Executable scripts are in the script folder.
+    - script/check_hbase
+      Nagios plugin to check HBase cluster status
+      Described in recipe 5 "Simple scripts to report status of the cluster"
+    - dus.rb
+      Show human-readable HBase space utilization
+
+  Java code are in the java folder
+    - src/hac/chapter5/WriteDiagnosis.java
+      Java code of recipe 6 "Hot region: write diagnosis"
+
+
+Compile and run the java sample code
+  Pre-requirements
+    - Java SDK 1.6
+    - Apache ivy
+    - Apache ant
+    - Internet connected
+
+  Compile the code
+    - Go to code/java
+    - Execute ant command
+      $ ant
+
+  Run the code
+    - Run recipe 6
+      $bash run-write-diagnosis.sh
+      Check recipe 6 for details
+
+
+Load the java sample code into eclipse
+  The Java sample is a completed eclipse project. To import it into eclipse, click File/Import menu, on the popup page, select General/Existing Projects into Workspace, locate to the code/java folder, click finish.

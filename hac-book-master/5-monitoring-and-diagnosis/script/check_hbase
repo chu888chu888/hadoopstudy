@@ -1,0 +1,59 @@
+#/bin/bash
+
+bin=`dirname $0`
+bin=`cd $bin;pwd`
+. $bin/utils.sh
+
+HADOOP_HOME=/usr/local/hadoop/current
+HBASE_HOME=/usr/local/hbase/current
+NN_HTTP=localhost:50070
+
+DFS_REMAINING_WARNING=15
+DFS_REMAINING_CRITICAL=5
+ABNORMAL_QUERY="INCONSISTENT|CORRUPT|FAILED|Exception"
+
+output=/tmp/cluster-status
+
+# hbase hbck
+echo "#### hbck report ####" > $output
+$HBASE_HOME/bin/hbase hbck >> $output
+
+# fsck report
+echo >> $output
+echo "#### fsck report ####" >> $output
+$HADOOP_HOME/bin/hadoop fsck /hbase >> $output
+
+# check report
+echo >> $output
+count=`egrep -c "$ABNORMAL_QUERY" $output`
+if [ $count -eq 0 ]; then
+    echo "[OK] Cluster is healthy." >> $output
+else
+    echo "[ABNORMAL] Cluster is abnormal!" >> $output
+    # Get the last matching entry in the report file
+    last_entry=`egrep "$ABNORMAL_QUERY" $output | tail -1`
+    echo "($count) $last_entry"
+    exit $STATE_CRITICAL
+fi
+
+# DFS usage report
+echo >> $output
+echo "#### DFS Usage report ####" >> $output
+dfs_remaining=`curl -s http://${NN_HTTP}/dfshealth.jsp |egrep -o "DFS Remaining%.*%" | egrep -o "[0-9]*\.[0-9]*"`
+dfs_remaining_word="DFS Remaining%: ${dfs_remaining}%"
+echo "$dfs_remaining_word" >> $output
+
+# check DFS usage
+dfs_remaining=`echo $dfs_remaining | awk -F '.' '{print $1}'`
+if [ $dfs_remaining -lt $DFS_REMAINING_CRITICAL ]; then
+    echo "Low DFS space. $dfs_remaining_word"
+    exit_status=$STATE_CRITICAL
+elif [ $dfs_remaining -lt $DFS_REMAINING_WARNING ]; then
+    echo "Low DFS space. $dfs_remaining_word"
+    exit_status=$STATE_WARNING
+else
+    echo "HBase check OK - DFS and HBase healthy. $dfs_remaining_word"
+    exit_status=$STATE_OK
+fi
+
+exit $exit_status

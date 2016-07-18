@@ -1,0 +1,8 @@
+README
+
+Structure of the code
+  There is only one folder, the script folder.
+
+  Executable scripts are in the script folder.
+    - region-starting-keys.rb
+      Get region starting keys. Described in "Also backup region starting keys", recipe 6.

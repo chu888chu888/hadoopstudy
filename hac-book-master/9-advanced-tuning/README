@@ -1,0 +1,17 @@
+README
+
+Structure of the code
+  There are only one folder, the java folder.
+
+  Java sample code is in the java folder.
+    - java/FileSplitAlgorithm.java
+      Create HBase table with pre-created regions using customized region boundaries.
+      Described in recipe 3 'Pre-creating regions using your own algorithm'
+
+    - java/run-split.sh
+      Script to kick FileSplitAlgorithm.java to pre-create regions using your own algorithm
+      Described in recipe 3 'Pre-creating regions using your own algorithm'
+
+    - java/split-keys
+      Sample region boundaries used in FileSplitAlgorithm.java
+      Described in recipe 3 'Pre-creating regions using your own algorithm'

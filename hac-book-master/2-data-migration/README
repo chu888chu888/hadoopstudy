@@ -1,0 +1,47 @@
+README
+
+Structure of the code
+  There are three folders, ddl, java and script.
+
+  ddl is the folder contains SQL commands to create example tables in MySQL
+    - ddl/hly_temp_normal.sql: DDL for hly_temp_normal table
+      Described in recipe 1
+    
+  Executable scripts are in the script folder.
+    - insert_hly.py
+      Insert NOAA hourly data into MySQL. Described in "Getting ready", recipe 1.
+    - to_tsv_hly.py
+      Convert NOAA hourly data to TSV file . Described in "Getting ready", recipe 2.
+
+  Java code are in the java folder
+    - src/hac/chapter2/Recipe1.java
+      Java code of recipe 1
+    - src/hac/chapter2/Recipe3.java
+      Java code of recipe 3
+    - src/hac/chapter2/Common.java
+      Utility class for both recipe 1 and 3
+
+
+Compile and run the java sample code
+  Pre-requirements
+    - Java SDK 1.6
+    - Apache ivy
+    - Apache ant
+    - Internet connected
+
+  Compile the code
+    - Go to code/java
+    - Execute ant command
+      $ ant
+
+  Run the code
+    - Run recipe 1
+      $bash run-recipe1.sh
+      Check recipe 1 for details
+    - Run recipe 3
+      $bash run-recipe3.sh
+      Check recipe 3 for details
+
+
+Load the java sample code into eclipse
+  The Java sample is a completed eclipse project. To import it into eclipse, click File/Import menu, on the popup page, select General/Existing Projects into Workspace, locate to the code/java folder, click finish.

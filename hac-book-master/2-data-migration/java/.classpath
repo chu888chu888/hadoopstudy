@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/hadoop-core-0.20.205.0.jar"/>
+	<classpathentry kind="lib" path="lib/hbase-0.90.4.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.18.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
