@@ -1,0 +1,785 @@
+Message-ID: <1565935955.472.1460283302987.JavaMail.confluence2@transwarpn>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_471_2097106417.1460283302987"
+
+------=_Part_471_2097106417.1460283302987
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html>
+    <head>
+        <!-- MS Word on Windows doesn't realise the encoding is UTF-8 unles=
+s this meta tag is present -->
+        <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Du=
+tf-8">
+        <title>HBase=E5=85=A8=E6=96=87=E6=A3=80=E7=B4=A2</title>
+        <style>
+            body, p, td, table, tr, .bodytext, .stepfield {
+=09            font-family: Arial, Helvetica, FreeSans, sans-serif;
+            }
+            .panel {
+                margin: 10px;
+                padding: 10px;
+                border: 1px solid #999;
+                background-color: #f0f0f0;
+            }
+            .noteMacro { border-style: solid; border-width: 1px; border-col=
+or: #F0C000; background-color: #FFFFCE; text-align:left;}
+            .warningMacro { border-style: solid; border-width: 1px; border-=
+color: #c00; background-color: #fcc; text-align:left;}
+            .infoMacro { border-style: solid; border-width: 1px; border-col=
+or: #69c; background-color: #D8E4F1; text-align:left;}
+            .tipMacro { border-style: solid; border-width: 1px; border-colo=
+r: #090; background-color: #dfd; text-align:left;}
+            .informationMacroPadding { padding: 5px 0 0 5px; }
+
+            table.infoMacro td, table.warningMacro td, table.tipMacro td, t=
+able.noteMacro td, table.sectionMacro td {
+                border: none;
+            }
+
+            .grid {
+                margin: 2px 0px 5px 0px;
+                border-collapse: collapse;
+            }
+            .grid th  {
+                border: 1px solid #ccc;
+                padding: 2px 4px 2px 4px;
+                background: #f0f0f0;
+                text-align: center;
+            }
+            .grid td  {
+                border: 1px solid #ccc;
+                padding: 3px 4px 3px 4px;
+            }           =20
+        </style>
+    </head>
+
+    <body style=3D"background-color: white; padding: 10px;">
+        <h1>HBase=E5=85=A8=E6=96=87=E6=A3=80=E7=B4=A2</h1>
+        <p>HBase=E5=85=A8=E6=96=87=E6=A3=80=E7=B4=A2=E5=90=8E=E7=AB=AF=E9=
+=87=87=E7=94=A8elasticsearch=E5=AE=9E=E7=8E=B0</p><p>=C2=A0</p><p>=E5=AE=89=
+=E8=A3=85elasticsearch=E4=BD=BF=E7=94=A8</p><p>yum install elasticsearch</p=
+><h2 id=3D"HBase%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2-%E4%B8%80.elasticsearc=
+h%E9%85%8D%E7%BD%AE%EF%BC%9A">=C2=A0=E4=B8=80.elasticsearch=E9=85=8D=E7=BD=
+=AE=EF=BC=9A</h2><p>=E9=85=8D=E7=BD=AE=E6=96=87=E4=BB=B6=E4=BD=8D=E7=BD=AE=
+=EF=BC=9A/usr/lib/elasticsearch/elasticsearch-1.3.1-transwarp/config/elasti=
+csearch.yml</p><p>=E5=85=B3=E9=94=AE=E9=85=8D=E7=BD=AE=E9=A1=B9=E5=A6=82=E4=
+=B8=8B=EF=BC=9A</p><p>cluster.name: elasticsearch</p><p>elasticsearch=E9=9B=
+=86=E7=BE=A4=E5=90=8D=E7=A7=B0=EF=BC=8Celasticsearch=E9=80=9A=E8=BF=87=E8=
+=AF=A5=E5=90=8D=E7=A7=B0=E5=88=A4=E6=96=AD=E8=8A=82=E7=82=B9=E5=B1=9E=E4=BA=
+=8E=E5=93=AA=E4=B8=AA=E9=9B=86=E7=BE=A4=E3=80=82</p><p>=C2=A0</p><p>node.na=
+me: &quot;transwarp-nv01&quot;</p><p>elasticsearch=E8=8A=82=E7=82=B9=E5=90=
+=8D=E7=A7=B0=EF=BC=8C=E6=8E=A8=E8=8D=90=E9=85=8D=E7=BD=AE=E4=B8=BA=E6=9C=89=
+=E6=84=8F=E4=B9=89=E7=9A=84=E5=90=8D=E7=A7=B0=E5=A6=82hostname=E3=80=82</p>=
+<p>=C2=A0</p><p>node.master: true</p><p>=E8=AF=A5=E8=8A=82=E7=82=B9=E6=98=
+=AF=E5=90=A6=E8=83=BD=E4=BD=9C=E4=B8=BAmaster=E3=80=82</p><p>=C2=A0</p><p>n=
+ode.data: true</p><p>=E8=AF=A5=E8=8A=82=E7=82=B9=E6=98=AF=E5=90=A6=E8=83=BD=
+=E7=94=A8=E4=BA=8E=E5=AD=98=E5=82=A8=E6=95=B0=E6=8D=AE=E3=80=82</p><p>=C2=
+=A0</p><p>discovery.zen.ping.multicast.enabled: false</p><p>elasticsearch=
+=E9=BB=98=E8=AE=A4=E4=BD=BF=E7=94=A8=E5=A4=9A=E6=92=AD=E6=9D=A5=E5=8F=91=E7=
+=8E=B0=E8=8A=82=E7=82=B9=EF=BC=8C=E8=AF=A5=E9=85=8D=E7=BD=AE=E6=8C=87=E5=AE=
+=9A=E4=BD=BF=E7=94=A8route=E8=BF=9B=E8=A1=8C=E8=8A=82=E7=82=B9=E5=8F=91=E7=
+=8E=B0=E3=80=82</p><p>=C2=A0</p><p>discovery.zen.ping.unicast.hosts: [&quot=
+;transwarp-nv01&quot;, &quot;transwarp-nv02&quot;, &quot;transwarp-nv03&quo=
+t;]</p><p>=E9=85=8D=E7=BD=AEroute=E8=8A=82=E7=82=B9=EF=BC=8C=E6=8E=A8=E8=8D=
+=90=E5=B0=86route=E8=8A=82=E7=82=B9=E9=85=8D=E7=BD=AE=E4=B8=BAmaster=E8=8A=
+=82=E7=82=B9=E3=80=82</p><p>=C2=A0</p><p>discovery.zen.minimum_master_nodes=
+: 2</p><p>=E8=8A=82=E7=82=B9=E8=83=BD=E5=8A=A0=E5=85=A5=E9=9B=86=E7=BE=A4=
+=E9=9C=80=E8=A6=81=E8=BF=9E=E6=8E=A5=E7=9A=84=E6=9C=80=E5=B0=8Fmaster=E6=95=
+=B0=EF=BC=8C=E4=B8=BA=E4=BA=86=E9=98=B2=E6=AD=A2=E8=84=91=E8=A3=82=EF=BC=8C=
+=E6=8E=A8=E8=8D=90=E9=85=8D=E7=BD=AE=E4=B8=BAn/2+1=EF=BC=8Cn=E4=B8=BAmaster=
+=E8=8A=82=E7=82=B9=E6=95=B0=E3=80=82</p><p>=C2=A0</p><p>path.data: <a class=
+=3D"external-link" href=3D"file:///mnt/disk2/elasticsearch%2C/mnt/disk3/ela=
+sticsearch" title=3D"/mnt/disk2/elasticsearch,/mnt/disk3/elasticsearch" rel=
+=3D"nofollow">/mnt/disk2/elasticsearch,/mnt/disk3/elasticsearch</a></p><p>e=
+lasticsearch=E8=8A=82=E7=82=B9=E6=95=B0=E6=8D=AE=E5=AD=98=E5=82=A8=E8=B7=AF=
+=E5=BE=84=EF=BC=8C=E5=A6=82=E4=BD=BF=E7=94=A8ssd=E5=88=99=E5=B0=86=E8=AF=A5=
+=E8=B7=AF=E5=BE=84=E9=85=8D=E7=BD=AE=E5=88=B0ssd=E4=B8=8A=E5=8D=B3=E5=8F=AF=
+=E3=80=82</p><p>=C2=A0</p><p>index.number_of_shards: 10</p><p>=E7=B4=A2=E5=
+=BC=95=E7=9A=84=E9=BB=98=E8=AE=A4shards=E6=95=B0=EF=BC=8Celasticsearch=E9=
+=87=87=E7=94=A8hash=E5=88=86shard=EF=BC=8C=E7=94=B1=E4=BA=8E=E7=9B=AE=E5=89=
+=8Delasticsearch=E6=9A=82=E4=B8=8D=E6=94=AF=E6=8C=81=E5=8A=A8=E6=80=81resha=
+rd=EF=BC=8Cshard=E6=95=B0=E6=8E=A8=E8=8D=90=E9=80=82=E5=BD=93=E7=9A=84=E9=
+=85=8D=E5=A4=A7=E4=B8=80=E4=BA=9B=E3=80=82</p><p>=C2=A0</p><p>index.number_=
+of_replicas: 2</p><p>=E7=B4=A2=E5=BC=95=E7=9A=84=E9=BB=98=E8=AE=A4=E5=89=AF=
+=E6=9C=AC=E6=95=B0=E3=80=82</p><p>=C2=A0</p><p>gateway.recover_after_nodes:=
+ 8</p><p>=E5=BD=93=E9=9B=86=E7=BE=A4=E4=B8=AD=E8=8A=82=E7=82=B9=E6=95=B0=E8=
+=BE=BE=E5=88=B0=E4=B8=80=E5=AE=9A=E6=95=B0=E9=87=8F=E6=97=B6=E6=89=8D=E8=A7=
+=A6=E5=8F=91recovery=EF=BC=8C=E8=AF=A5=E5=80=BC=E9=9C=80=E8=A6=81=E6=A0=B9=
+=E6=8D=AE=E5=85=B7=E4=BD=93=E9=9B=86=E7=BE=A4=E8=A7=84=E6=A8=A1=E8=AE=BE=E7=
+=BD=AE</p><p>=C2=A0</p><p>gateway.expected_nodes: 10</p><p>=E9=9B=86=E7=BE=
+=A4=E8=A7=84=E5=88=92=E7=9A=84=E8=8A=82=E7=82=B9=E6=95=B0=EF=BC=8C=E6=8C=89=
+=E5=85=B7=E4=BD=93=E6=83=85=E5=86=B5=E8=AE=BE=E7=BD=AE</p><p><br />gateway.=
+recover_after_time: 5m</p><p>=E5=BD=93=E9=9B=86=E7=BE=A4=E8=8A=82=E7=82=B9=
+=E6=95=B0=E8=BE=BE=E4=B8=8D=E5=88=B0expected_nodes=E6=97=B6=EF=BC=8C=E5=BB=
+=B6=E8=BF=9F=E4=B8=80=E6=AE=B5=E6=97=B6=E9=97=B4=E8=BF=9B=E8=A1=8Crecovery<=
+/p><p>=C2=A0</p><h2 id=3D"HBase%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2-%E4%BA%=
+8C.hyperbase%E9%85%8D%E7%BD%AE">=E4=BA=8C.hyperbase=E9=85=8D=E7=BD=AE</h2><=
+p>hyperbase=E4=BD=9C=E4=B8=BAelasticsearch=E7=9A=84=E5=AE=A2=E6=88=B7=E7=AB=
+=AF=E5=8A=A0=E5=85=A5elasticsearch=E9=9B=86=E7=BE=A4=EF=BC=8C=E9=9C=80=E8=
+=A6=81=E5=9C=A8hbase-site.xml=E9=87=8C=E6=B7=BB=E5=8A=A0elasticsearch=E7=9B=
+=B8=E5=85=B3=E9=85=8D=E7=BD=AE=EF=BC=9A</p><p>&lt;property&gt;</p><p>=C2=A0=
+ =C2=A0 &lt;name&gt;cluster.name&lt;/name&gt;</p><p>=C2=A0 =C2=A0 &lt;value=
+&gt;elasticsearch&lt;/value&gt;</p><p>&lt;/property&gt;</p><p>&lt;property&=
+gt;</p><p>=C2=A0 =C2=A0 &lt;name&gt;discovery.zen.ping.unicast.hosts&lt;/na=
+me&gt;</p><p>=C2=A0 =C2=A0 &lt;value&gt;transwarp-nv01,transwarp-nv02,trans=
+warp-nv03,transwarp-nv04(=E6=8E=A8=E8=8D=90=E5=B0=86=E6=89=80=E6=9C=89es=E8=
+=8A=82=E7=82=B9=E9=83=BD=E9=85=8D=E7=BD=AE)&lt;/value&gt;</p><p>&lt;/proper=
+ty&gt;</p><p>&lt;property&gt;</p><p>=C2=A0 =C2=A0 &lt;name&gt;discovery.zen=
+.ping.multicast.enabled&lt;/name&gt;</p><p>=C2=A0 =C2=A0 &lt;value&gt;false=
+&lt;/value&gt;</p><p>&lt;/property&gt;</p><p>&lt;property&gt;</p><p>=C2=A0 =
+=C2=A0 &lt;name&gt;discovery.zen.minimum_master_nodes&lt;/name&gt;</p><p>=
+=C2=A0 =C2=A0 &lt;value&gt;2&lt;/value&gt;</p><p>&lt;/property&gt;</p><p>=
+=E9=9C=80=E8=A6=81=E6=B7=BB=E5=8A=A0coprocessor=E9=85=8D=E7=BD=AE</p><p>&lt=
+;property&gt;</p><p>=C2=A0 =C2=A0 &lt;name&gt;hbase.coprocessor.region.clas=
+ses&lt;/name&gt;</p><p>=C2=A0 =C2=A0 &lt;value&gt;org.apache.hadoop.hyperba=
+se.fulltextindex.coprocessor.EsRegionCoprocessor&lt;/value&gt;</p><p>&lt;/p=
+roperty&gt;</p><p>=C2=A0</p><h2 id=3D"HBase%E5%85%A8%E6%96%87%E6%A3%80%E7%B=
+4%A2-%E4%B8%89.%E5%BB%BA%E7%B4%A2%E5%BC%95%E8%AF%AD%E6%B3%95">=E4=B8=89.=E5=
+=BB=BA=E7=B4=A2=E5=BC=95=E8=AF=AD=E6=B3=95</h2><p>=E6=8E=A8=E8=8D=90=E9=80=
+=9A=E8=BF=87hyperbase=E7=BB=9F=E4=B8=80=E9=85=8D=E7=BD=AE=E4=B8=AD=E5=BF=83=
+=E5=BB=BA=E5=85=A8=E6=96=87=E7=B4=A2=E5=BC=95</p><p>=E5=AF=BC=E5=87=BA=E9=
+=85=8D=E7=BD=AE=E6=96=87=E4=BB=B6=EF=BC=9A</p><p>hbase shell: &gt;=C2=A0<sp=
+an style=3D"line-height: 1.4285715;background-color: transparent;">describe=
+InJson 'tableName', 'true', 'path'</span></p><p>=E4=BC=9A=E5=9C=A8=E6=8C=87=
+=E5=AE=9Apath=E7=94=9F=E6=88=90=E5=AF=B9=E5=BA=94=E8=A1=A8=E7=9A=84=E9=85=
+=8D=E7=BD=AE=E6=96=87=E4=BB=B6</p><p>=E4=BF=AE=E6=94=B9=E5=90=8E=E4=BD=BF=
+=E7=94=A8=E5=A6=82=E4=B8=8B=E5=91=BD=E4=BB=A4=E4=BF=AE=E6=94=B9=E8=A1=A8=E7=
+=BB=93=E6=9E=84=EF=BC=9A</p><p>hbase shell: &gt;=C2=A0alterUseJson 'tableNa=
+me', 'path'</p><p><span><br /></span></p><p>=E5=85=A8=E6=96=87=E6=A3=80=E7=
+=B4=A2=E8=AF=AD=E6=B3=95=E5=A6=82=E4=B8=8B=EF=BC=9A</p><p>=E2=80=9Cfulltext=
+index=E2=80=9D =EF=BC=9A {</p><p>=C2=A0 =C2=A0 &quot;tableName&quot;:&quot;=
+string&quot;, // hbase=E8=A1=A8=E5=90=8D</p><p>=C2=A0 =C2=A0 &quot;allowUpd=
+ate&quot;:&quot;true/false&quot;, // =E5=BF=85=E5=A1=AB=E9=A1=B9=EF=BC=8Cbo=
+olean=E5=80=BC=EF=BC=8C=E8=A1=A8=E7=A4=BA=E6=98=AF=E5=90=A6=E5=85=81=E8=AE=
+=B8=E5=AF=B9=E5=BB=BA=E7=B4=A2=E5=BC=95=E5=88=97=E8=BF=9B=E8=A1=8Cupdate=E6=
+=93=8D=E4=BD=9C=EF=BC=8C</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // =E5=A6=82=E6=9E=9C=E8=AE=BE=E7=BD=
+=AE=E4=B8=BAfalse=EF=BC=8C=E5=88=99hbase=E4=B8=ADput/delete=E9=9C=80=E8=A6=
+=81=E5=AE=8C=E5=85=A8=E8=A6=86=E7=9B=96=E6=88=96=E5=AE=8C=E5=85=A8=E4=B8=8D=
+=E6=B6=89=E5=8F=8A=E9=9C=80=E8=A6=81=E7=B4=A2=E5=BC=95=E7=9A=84column</p><p=
+>=C2=A0 =C2=A0 &quot;ttl&quot; : 3600000, // =E5=8F=AF=E9=80=89=E9=A1=B9=EF=
+=BC=8C=E8=A1=A8=E7=A4=BA=E7=B4=A2=E5=BC=95=E6=95=B0=E6=8D=AE=E7=9A=84ttl=E6=
+=97=B6=E9=97=B4=EF=BC=8C=E5=8D=95=E4=BD=8D=E6=AF=AB=E7=A7=92=EF=BC=8C0=E6=
+=88=96=E4=B8=8D=E5=A1=AB=E8=A1=A8=E7=A4=BA=E4=B8=8D=E8=BF=9B=E8=A1=8C=E6=95=
+=B0=E6=8D=AEttl=EF=BC=8C=E9=BB=98=E8=AE=A4=E4=B8=BA0</p><p>=C2=A0 =C2=A0 =
+=E2=80=9Csource=E2=80=9D : true/false, // =E5=8F=AF=E9=80=89=E9=A1=B9=EF=BC=
+=8C=E8=A1=A8=E7=A4=BA=E6=98=AF=E5=90=A6=E5=9C=A8es=E4=B8=AD=E5=AD=98=E5=82=
+=A8_source=E4=BF=A1=E6=81=AF=EF=BC=8C=E9=BB=98=E8=AE=A4=E4=B8=BAtrue=EF=BC=
+=9B</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0// =E5=
+=A6=82=E8=AF=A5=E9=85=8D=E7=BD=AE=E9=A1=B9=E8=AE=BE=E7=BD=AE=E4=B8=BAtrue=
+=EF=BC=8C=E5=88=99=E5=9C=A8hive=E4=B8=AD=E5=8F=AF=E4=BB=A5=E5=BC=80=E5=90=
+=AF=E4=B8=80=E9=A1=B9=E4=BC=98=E5=8C=96(hyperbase.esasstorage=EF=BC=8C=E9=
+=BB=98=E8=AE=A4=E5=BC=80=E5=90=AF)=EF=BC=8C</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0// =E5=AF=B9=E4=B8=80=E6=AC=A1=E6=9F=A5=
+=E8=AF=A2=EF=BC=8C=E5=A6=82=E6=9E=9Ces=E4=B8=AD=E5=AD=98=E5=82=A8=E4=BA=86=
+=E6=89=80=E6=9C=89=E5=BE=85=E8=BF=94=E5=9B=9E=E7=9A=84=E5=88=97=EF=BC=8C=E5=
+=88=99=E4=B8=8D=E9=9C=80=E8=A6=81=E5=86=8D=E4=BB=8Ehyperbase=E5=8F=96=E7=BB=
+=93=E6=9E=9C</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0// =E5=A6=82=E8=AF=A5=E9=85=8D=E7=BD=AE=E9=A1=B9=E8=AE=BE=E7=BD=AE=E4=B8=
+=BAfalse=EF=BC=8C=E5=8F=AF=E4=BB=A5=E5=8A=A0=E9=80=9Frebuild_fulltext_index=
+=EF=BC=8C=E5=87=8F=E5=B0=91=E7=B4=A2=E5=BC=95=E5=A4=A7=E5=B0=8F</p><p>=C2=
+=A0 =C2=A0 &quot;all&quot; : &quot;true/false&quot;, // =E5=8F=AF=E9=80=89=
+=E9=A1=B9=EF=BC=8C=E8=A1=A8=E7=A4=BA=E6=98=AF=E5=90=A6=E5=9C=A8es=E4=B8=AD=
+=E5=AD=98=E5=82=A8_all=E4=BF=A1=E6=81=AF=EF=BC=8C=E9=BB=98=E8=AE=A4=E4=B8=
+=BAfalse=EF=BC=9B</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // =E4=B8=8E_source=
+=E7=B1=BB=E4=BC=BC=EF=BC=8C_all=E6=98=AFes=E6=8F=90=E4=BE=9B=E7=9A=84=E9=BB=
+=98=E8=AE=A4field=EF=BC=8C=E5=A6=82=E8=AF=A5=E9=85=8D=E7=BD=AE=E8=AE=BE=E7=
+=BD=AE=E4=B8=BAtrue=EF=BC=8C=E5=88=99=E5=8F=AF=E4=BB=A5=E5=AE=9E=E7=8E=B0=
+=E2=80=9C=E5=9C=A8=E6=89=80=E6=9C=89=E5=AD=97=E6=AE=B5=E4=B8=AD=E6=A3=80=E7=
+=B4=A2xxx=E5=85=B3=E9=94=AE=E5=AD=97=E2=80=9D=E7=9A=84=E8=AF=AD=E8=A8=80</p=
+><p>=C2=A0 =C2=A0 &quot;fields&quot;:[ // field=E6=95=B0=E7=BB=84=EF=BC=8C=
+=E6=AF=8F=E4=B8=AAfield=E6=8F=8F=E8=BF=B0=E4=B8=80=E4=B8=AAhbase=E5=88=97=
+=E7=9A=84=E7=B4=A2=E5=BC=95=E4=BF=A1=E6=81=AF</p><p>=C2=A0 =C2=A0 {</p><p>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;family&quot; : &quot;string&quot;, // hba=
+se family name=EF=BC=8C=E5=BF=85=E5=A1=AB</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ &quot;qualifier&quot; : &quot;string&quot;, // hbase qualifier name=EF=BC=
+=8C=E5=BF=85=E5=A1=AB</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0<span style=3D=
+"line-height: 1.4285715;background-color: transparent;">&quot;encode_as_str=
+ing&quot; : &quot;true&quot;, // =E5=A6=82=E6=9E=9Ctype=C2=A0!=3D string=EF=
+=BC=8C=E8=AF=A5=E5=B1=9E=E6=80=A7=E8=A1=A8=E7=A4=BA=E5=9C=A8hbase=E4=B8=AD=
+=E5=AD=98=E5=82=A8=E7=9A=84byte=E6=95=B0=E7=BB=84=E6=98=AF=E5=90=A6=E6=98=
+=AF=E7=94=B1=E7=89=B9=E5=AE=9A=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=8B=E8=BD=AC=
+=E6=8D=A2=E6=88=90=E7=9A=84=EF=BC=8C</span></p><p>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 // =E4=BB=A5type =3D=3D long=EF=BC=8C=E5=80=BC=E4=B8=BA123=E4=B8=
+=BE=E4=BE=8B=EF=BC=8C=E5=BD=93=E8=AF=A5=E5=80=BC=E4=B8=BAtrue=E6=98=AF=EF=
+=BC=8Chbase=E4=B8=AD=E5=AD=98=E5=82=A8=E7=9A=84byte[]=E6=98=AFBytes.toBytes=
+(&quot;123&quot;)=EF=BC=8C</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // =E5=
+=BD=93=E8=AF=A5=E5=80=BC=E4=B8=BAfalse=E6=97=B6=EF=BC=8Chbase=E4=B8=AD=E5=
+=AD=98=E5=82=A8=E7=9A=84byte[]=E6=98=AFBytes.toBytes(123)</p><p>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0// =E9=BB=98=E8=AE=A4=E4=B8=BAfalse</p><p>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;attributes&quot; :=C2=A0{</p><p>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0<span style=3D"line-height: 1.4285715;back=
+ground-color: transparent;">&quot;type&quot; : &quot;string/byte/short/inte=
+ger/long/float/double/boolean/date&quot;, // =E6=95=B0=E6=8D=AE=E7=B1=BB=E5=
+=9E=8B=EF=BC=8C=E9=80=89=E5=A1=AB=EF=BC=8C=E9=BB=98=E8=AE=A4=E4=B8=BAstring=
+</span></p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0// =E9=9C=80=E8=A6=81=
+=E7=89=B9=E6=AE=8A=E6=B3=A8=E6=84=8F=E7=9A=84=E6=98=AFdate=E7=B1=BB=E5=9E=
+=8B=EF=BC=8Ces=E4=B8=AD=E7=9A=84date=E7=B1=BB=E5=9E=8B=E6=94=AF=E6=8C=81str=
+ing=E7=B1=BB=E5=9E=8B=E4=B8=8Elong=E7=B1=BB=E5=9E=8B=E7=9A=84=E6=95=B0=E6=
+=8D=AE=EF=BC=8C</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0// =E4=BD=86=E5=
+=9C=A8hyperbase=E4=B8=AD=EF=BC=8Cdate=E7=B1=BB=E5=9E=8B=E5=8F=AA=E6=94=AF=
+=E6=8C=81string=E7=B1=BB=E5=9E=8B=EF=BC=8C</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0// =E5=85=B6=E6=A0=BC=E5=BC=8F=E6=98=AFes=E4=B8=AD=E7=9A=84dat=
+eOptionalTime=EF=BC=8C=E5=A6=82<span style=3D"color: rgb(85,85,85);">&quot;=
+2015-01-01&quot;=E6=88=96&quot;2015-01-01 12:12:12&quot;</span></p><p><span=
+ style=3D"color: rgb(85,85,85);">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0// =E5=
+=A6=82=E6=9E=9C=E7=94=A8=E6=88=B7=E7=9A=84=E6=95=B0=E6=8D=AE=E6=98=AFlong=
+=E8=A1=A8=E7=A4=BA=EF=BC=8C=E8=AF=B7=E4=BD=BF=E7=94=A8long=E7=B1=BB=E5=9E=
+=8B</span></p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;analyzer&q=
+uot; : &quot;ik/mmseg&quot;, // =E5=88=86=E8=AF=8D=E5=99=A8=EF=BC=8C=E9=80=
+=89=E5=A1=AB=EF=BC=8C=E9=BB=98=E8=AE=A4=E4=BD=BF=E7=94=A8es=E8=87=AA=E5=B8=
+=A6=E7=9A=84analyzer=EF=BC=8C=E4=BD=BF=E7=94=A8=E8=AF=A5=E9=85=8D=E7=BD=AE=
+=E9=A1=B9=E5=8F=AF=E4=BB=A5=E5=90=8C=E6=97=B6=E6=8C=87=E5=AE=9Asearch=E5=92=
+=8Cindex=E7=9A=84analyzer</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=E2=80=9Csearch_analyzer=E2=80=9D : &quot;ik/mmseg&quot;, // =E5=8D=95=E7=
+=8B=AC=E6=8C=87=E5=AE=9Asearch=E7=9A=84analyzer</p><p>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 &quot;index_analyzer&quot; : &quot;ik/mmsge&quot;, // =
+=E5=8D=95=E7=8B=AC=E6=8C=87=E5=AE=9Aindex=E7=9A=84analyzer</p><p>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;store&quot; : &quot;true/false&quot;,=
+ // =E6=98=AF=E5=90=A6=E5=AD=98=E5=82=A8=EF=BC=8C=E9=80=89=E5=A1=AB=EF=BC=
+=8C=E9=BB=98=E8=AE=A4=E6=98=AFtrue</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 &quot;index&quot; : &quot;analyzed/not_analyzed/no&quot; // =E6=98=
+=AF=E5=90=A6=E7=B4=A2=E5=BC=95=EF=BC=8C=E9=80=89=E5=A1=AB=EF=BC=8C=E9=BB=98=
+=E8=AE=A4=E4=B8=BAnot_analyzed=EF=BC=8C</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0<span>=C2=A0// analy=
+zed:First analyze the string and then index it. In other words, index this =
+field as full text.</span></p><p><span>=C2=A0</span><span>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // not_a=
+nalyzed:Index this field, so it is searchable, but index the value exactly =
+as specified. Do not analyze it.</span></p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // no:Don=E2=80=99t=
+ index this field at all. This field will not be searchable.</p><p>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;doc_values&quot; : &quot;true/fals=
+e&quot;, //=C2=A0=E9=BB=98=E8=AE=A4=E4=B8=BAfalse=E8=A1=A8=E7=A4=BA=E4=B8=
+=8D=E5=90=AF=E7=94=A8</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0// =E5=BD=93=E4=B8=80=E4=B8=AAfield=E4=B8=8D=E5=90=AF=E7=94=A8doc_values=
+=E6=97=B6=EF=BC=8C=E5=AF=B9=E8=AF=A5field=E7=9A=84sort/fact/aggregation=E6=
+=93=8D=E4=BD=9C=E9=9C=80=E8=A6=81on fly=E7=9A=84=E5=B0=86=E8=AF=A5field=E8=
+=A3=85=E8=BD=BD=E5=88=B0field cache=E4=B8=AD</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0// =E8=AE=BE=E4=B8=BAtrue=E4=B8=BA=E8=AF=A5field=E5=
+=90=AF=E7=94=A8doc_values=EF=BC=8C=E5=90=AF=E7=94=A8doc_values=E7=9A=84fiel=
+d=E4=BC=9A=E5=9C=A8index=E6=97=B6=E5=9C=A8=E7=A3=81=E7=9B=98=E4=B8=8A=E5=BB=
+=BA=E7=AB=8Bdoc=E5=88=B0field=E7=9A=84=E7=B4=A2=E5=BC=95=EF=BC=8C</p><p>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0// =E6=8D=AEes=E5=92=8Clucene=
+=E5=AE=98=E7=BD=91=E4=B8=8A=E7=9A=84=E4=BB=8B=E7=BB=8D=EF=BC=8C=E4=BD=BF=E7=
+=94=A8doc_values=E6=AF=94=E4=BD=BF=E7=94=A8field cache=E6=80=A7=E8=83=BD=E5=
+=8F=AA=E6=9C=8910%~20%=E7=9A=84=E9=99=8D=E4=BD=8E=EF=BC=8C=E5=8D=B4=E9=81=
+=BF=E5=85=8D=E4=BA=86sort/aggregation=E8=BF=87=E7=A8=8B=E4=B8=AD=E7=9A=84=
+=E5=A4=A7=E9=87=8F=E5=86=85=E5=AD=98=E5=BC=80=E9=94=80</p><p>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0// lucene 5.0=E4=B8=AD=E5=B7=B2=E7=BB=8F=
+=E6=8E=A8=E8=8D=90=E4=BD=BF=E7=94=A8doc values=E7=9A=84=E6=96=B9=E5=BC=8F=
+=E8=BF=9B=E8=A1=8Csort/aggregation=E6=93=8D=E4=BD=9C</p><p>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0// =E4=BD=BF=E7=94=A8doc values=E7=9A=84=
+=E7=B4=A2=E5=BC=95=E4=BC=9A=E5=8D=A0=E7=94=A8=E9=A2=9D=E5=A4=96=E7=9A=84=E7=
+=A3=81=E7=9B=98=E7=A9=BA=E9=97=B4=EF=BC=8C=E7=9B=B8=E5=BA=94=E7=9A=84=E9=99=
+=8D=E4=BD=8E=E4=B8=80=E4=BA=9B=E5=BB=BA=E7=B4=A2=E5=BC=95=E7=9A=84=E9=80=9F=
+=E5=BA=A6</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0//=C2=A0<a hr=
+ef=3D"https://www.elastic.co/guide/en/elasticsearch/guide/current/doc-value=
+s.html" class=3D"external-link" rel=3D"nofollow">https://www.elastic.co/gui=
+de/en/elasticsearch/guide/current/doc-values.html</a></p><p>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 }</p><p>=C2=A0 =C2=A0 }],</p><p>=C2=A0 =C2=A0 &quot;settings&=
+quot;: {</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;index.number_of_shards&quo=
+t; : &quot;10&quot;, // =E5=88=86=E7=89=87=E6=95=B0=EF=BC=8C=E5=A6=82=E4=B8=
+=8D=E6=8C=87=E5=AE=9A=E5=88=99=E4=BD=BF=E7=94=A8=E7=B3=BB=E7=BB=9F=E9=BB=98=
+=E8=AE=A4=E5=88=86=E7=89=87=E6=95=B0</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quo=
+t;index.number_of_replicas&quot; : &quot;2&quot; // =E5=89=AF=E6=9C=AC=E6=
+=95=B0=EF=BC=8C=E5=A6=82=E4=B8=8D=E6=8C=87=E5=AE=9A=E5=88=99=E4=BD=BF=E7=94=
+=A8=E7=B3=BB=E7=BB=9F=E9=BB=98=E8=AE=A4=E5=89=AF=E6=9C=AC=E6=95=B0</p><p>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // =E6=B3=A8=
+=E6=84=8F=EF=BC=8C=E8=AF=A5=E9=85=8D=E7=BD=AE=E6=8C=87=E5=AE=9Ashard=E7=9A=
+=84replica=E6=95=B0=EF=BC=8C=E6=8C=87=E5=AE=9A=E4=B8=BA0=E8=A1=A8=E7=A4=BA=
+=E6=AF=8F=E4=B8=AAshard=E5=8F=AA=E6=9C=89=E4=B8=80=E4=BB=BDprimary</p><p>=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 // =E5=9C=A8=
+=E6=89=B9=E9=87=8F=E5=BB=BA=E7=B4=A2=E5=BC=95=E6=97=B6=EF=BC=8C=E5=BE=80=E5=
+=BE=80=E5=B0=86=E8=AF=A5=E9=85=8D=E7=BD=AE=E6=8C=87=E5=AE=9A=E4=B8=BA0=EF=
+=BC=8C=E5=BB=BA=E7=B4=A2=E5=BC=95=E5=AE=8C=E6=88=90=E5=90=8E=E5=86=8D=E8=AE=
+=BE=E7=BD=AE=E4=B8=BA1=E6=88=962=EF=BC=8C=E9=80=9A=E8=BF=87recovery=E5=B0=
+=86=E5=89=AF=E6=9C=AC=E6=95=B0=E8=A1=A5=E5=85=A8</p><p>=C2=A0 =C2=A0 }</p><=
+p>}</p><p>=C2=A0</p><h2 id=3D"HBase%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2-%E5=
+%9B%9B.rebuildfulltextindex%E8%AF%AD%E6%B3%95">=E5=9B=9B.rebuild fulltext i=
+ndex=E8=AF=AD=E6=B3=95</h2><p>hbase shell=E9=87=8Crebuild_fulltext_index 't=
+ableName'=EF=BC=8C=E4=B8=8Erebuild=E4=BA=8C=E7=BA=A7=E7=B4=A2=E5=BC=95=E7=
+=B1=BB=E4=BC=BC=EF=BC=8Crebuild=E7=9A=84=E8=BF=87=E7=A8=8B=E6=98=AF=E9=80=
+=9A=E8=BF=87mapreduce=E6=9D=A5=E5=AE=9E=E7=8E=B0=E7=9A=84=E3=80=82</p><p>io=
+.transwarp.secondaryindex.concurrentRequests=EF=BC=8C=E9=85=8D=E7=BD=AE=E6=
+=AF=8F=E4=B8=AAmap=E5=86=99es=E7=9A=84=E7=BA=BF=E7=A8=8B=E6=95=B0=EF=BC=8C=
+=E9=BB=98=E8=AE=A4=E4=B8=BA1=EF=BC=9B</p><p>io.transwarp.secondaryindex.bul=
+kActions=EF=BC=8C=E9=85=8D=E7=BD=AE=E5=BB=BA=E7=B4=A2=E5=BC=95=E6=97=B6=E6=
+=AF=8F=E5=A4=9A=E5=B0=91=E4=B8=AAindex=E8=AF=B7=E6=B1=82=E4=BD=9C=E4=B8=BA=
+=E4=B8=80=E4=B8=AAbulk=EF=BC=8C=E9=BB=98=E8=AE=A41000=EF=BC=8C=E8=AE=BE=E4=
+=B8=BA-1=E5=8F=AF=E4=BB=A5disable=E6=8E=89=E8=AF=A5=E9=85=8D=E7=BD=AE=EF=BC=
+=8C=E5=8F=AA=E4=BD=BF=E7=94=A8bulkSize=EF=BC=9B</p><p>io.transwarp.secondar=
+yindex.bulkSize=EF=BC=8C=E9=85=8D=E7=BD=AE=E5=BB=BA=E7=B4=A2=E5=BC=95=E6=97=
+=B6=E5=A4=9A=E5=A4=A7=E7=9A=84index=E8=AF=B7=E6=B1=82=E4=BD=9C=E4=B8=BA=E4=
+=B8=80=E4=B8=AAbulk=EF=BC=8C=E5=8D=95=E4=BD=8Dbyte=EF=BC=8C=E9=BB=98=E8=AE=
+=A45*1024*1024(5m)=EF=BC=8C=E8=AE=BE=E4=B8=BA-1=E5=8F=AF=E4=BB=A5disable=E6=
+=8E=89=E8=AF=A5=E9=85=8D=E7=BD=AE=EF=BC=8C=E5=8F=AA=E4=BD=BF=E7=94=A8bulkAc=
+tions=EF=BC=9B</p><p>=E6=B3=A8=E6=84=8F=EF=BC=9A=E4=B8=8D=E8=A6=81=E8=BD=BB=
+=E6=98=93=E7=9A=84=E6=8A=8A=E5=A6=82=E4=B8=8A=E4=B8=A4=E4=B8=AA=E9=80=89=E9=
+=A1=B9=E7=9A=84=E4=BB=BB=E6=84=8F=E4=B8=80=E4=B8=AA=E8=AE=BE=E7=BD=AE=E4=B8=
+=BA-1=EF=BC=8C=E9=99=A4=E9=9D=9E=E4=BD=A0=E7=A1=AE=E5=AE=9A=E6=9C=89=E5=85=
+=85=E8=B6=B3=E7=9A=84=E7=90=86=E7=94=B1=E8=BF=99=E6=A0=B7=E5=81=9A=EF=BC=9B=
+</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=E6=AF=94=E5=A6=82=E8=AF=B4=
+=EF=BC=8C=E5=BD=93=E6=AF=8F=E4=B8=AA=E8=AF=B7=E6=B1=82=E8=BE=83=E5=B0=8F=E6=
+=97=B6=EF=BC=8C=E5=A6=82=E6=8A=8AbulkActions=E8=AE=BE=E4=B8=BA-1=EF=BC=8C=
+=E5=8F=AA=E7=94=A8bulkSize=E6=9D=A5=E5=86=B3=E5=AE=9A=E6=98=AF=E5=90=A6bulk=
+=EF=BC=8C=E5=8F=AF=E8=83=BD=E5=AF=BC=E8=87=B4mapper=E4=B8=AD=E5=B0=8F=E5=AF=
+=B9=E8=B1=A1=E8=BF=87=E5=A4=9A=EF=BC=8C=E5=AF=BC=E8=87=B4=E5=87=BA=E7=8E=B0=
+GC=E9=97=AE=E9=A2=98=EF=BC=9B=E4=BB=8E=E5=AE=9E=E9=99=85=E7=8E=A9=E7=9A=84=
+=E7=BB=8F=E9=AA=8C=E7=9C=8B=EF=BC=8C=E4=B8=80=E8=88=ACbulkActions=E4=B8=8D=
+=E5=BA=94=E8=AF=A5=E8=B6=85=E8=BF=872000(concurrentRequests=E4=B8=BA2=E6=97=
+=B6)=E3=80=82</p><p>=C2=A0</p><h2 id=3D"HBase%E5%85%A8%E6%96%87%E6%A3%80%E7=
+%B4%A2-%E4%BA%94.SQL%E4%B8%AD%E7%9A%84%E6%A3%80%E7%B4%A2%E8%AF%AD%E6%B3%95"=
+>=E4=BA=94.SQL=E4=B8=AD=E7=9A=84=E6=A3=80=E7=B4=A2=E8=AF=AD=E6=B3=95</h2><p=
+>=E6=A3=80=E7=B4=A2=E9=80=9A=E8=BF=87contains=E5=87=BD=E6=95=B0=E5=AE=9E=E7=
+=8E=B0=EF=BC=8C=E7=9B=AE=E5=89=8D=E6=94=AF=E6=8C=81=E7=B2=BE=E7=A1=AE=E5=8C=
+=B9=E9=85=8D=EF=BC=8C=E5=89=8D=E7=BC=80=E6=9F=A5=E8=AF=A2=EF=BC=8C=E6=A8=A1=
+=E7=B3=8A=E6=9F=A5=E8=AF=A2=E5=92=8C=E8=8C=83=E5=9B=B4=E6=9F=A5=E8=AF=A2=E5=
+=9B=9B=E7=A7=8D=E8=AF=AD=E4=B9=89=EF=BC=8C=E6=94=AF=E6=8C=81=E6=A3=80=E7=B4=
+=A2=E6=9D=A1=E4=BB=B6=E7=9A=84=E9=80=BB=E8=BE=91=E7=BB=84=E5=90=88=E3=80=82=
+</p><p>contains=E5=87=BD=E6=95=B0=E5=AE=9A=E4=B9=89=E5=A6=82=E4=B8=8B=EF=BC=
+=9A</p><p>contains(=E5=88=97=E5=90=8D=EF=BC=8C=E6=A3=80=E7=B4=A2=E6=9D=A1=
+=E4=BB=B6)</p><p>=E6=A3=80=E7=B4=A2=E6=9D=A1=E4=BB=B6 =3D&gt; =E6=93=8D=E4=
+=BD=9C=E7=AC=A6 =E6=A3=80=E7=B4=A2=E6=8F=8F=E8=BF=B0 AND|OR =E6=93=8D=E4=BD=
+=9C=E7=AC=A6 =E6=A3=80=E7=B4=A2=E6=8F=8F=E8=BF=B0</p><p>=E6=93=8D=E4=BD=9C=
+=E7=AC=A6 =3D&gt; term(=E7=B2=BE=E7=A1=AE=E5=8C=B9=E9=85=8D) | prefix(=E5=
+=89=8D=E7=BC=80=E6=9F=A5=E8=AF=A2) | wildcard(=E6=A8=A1=E7=B3=8A=E5=8C=B9=
+=E9=85=8D) | range(=E8=8C=83=E5=9B=B4=E6=9F=A5=E8=AF=A2) | regexp(=E6=AD=A3=
+=E5=88=99=E8=A1=A8=E8=BE=BE=E5=BC=8F) | in(in=E6=9F=A5=E8=AF=A2) | match(=
+=E5=85=A8=E6=96=87=E6=A3=80=E7=B4=A2) | &gt;(=E8=8C=83=E5=9B=B4=E6=9F=A5=E8=
+=AF=A2=EF=BC=8C=E5=A4=A7=E4=BA=8E) | &lt;(=E8=8C=83=E5=9B=B4=E6=9F=A5=E8=AF=
+=A2=EF=BC=8C=E5=B0=8F=E4=BA=8E) | &gt;=3D(=E8=8C=83=E5=9B=B4=E6=9F=A5=E8=AF=
+=A2=EF=BC=8C=E5=A4=A7=E4=BA=8E=E7=AD=89=E4=BA=8E) | &lt;=3D(=E8=8C=83=E5=9B=
+=B4=E6=9F=A5=E8=AF=A2=EF=BC=8C=E5=B0=8F=E4=BA=8E=E7=AD=89=E4=BA=8E)</p><p>=
+=E6=A3=80=E7=B4=A2=E6=8F=8F=E8=BF=B0 =3D&gt; '=E5=AD=97=E9=9D=A2=E9=87=8F'<=
+/p><p>=C2=A0</p><p>=E7=A4=BA=E4=BE=8B=EF=BC=9A</p><p>=E7=B2=BE=E7=A1=AE=E5=
+=8C=B9=E9=85=8D(term)</p><p>select dt from chengdao_inceptor where <strong>=
+contains(hphm, &quot;term '=E9=B2=81D528E8'&quot;)</strong> order by dt =C2=
+=A0limit 100;</p><p>=E5=89=8D=E7=BC=80=E5=8C=B9=E9=85=8D(prefix)</p><p>sele=
+ct dt from chengdao_inceptor where=C2=A0<strong>contains(hphm, &quot;prefix=
+ '=E9=B2=81D528'&quot;)</strong>=C2=A0order by dt =C2=A0limit 100;</p><p>=
+=E6=A8=A1=E7=B3=8A=E6=9F=A5=E8=AF=A2(wildcard)</p><p>select dt from chengda=
+o_inceptor where <strong>contains(hphm, &quot;wildcard '=E9=B2=81D*28E8'&qu=
+ot;)</strong> order by dt =C2=A0limit 100;</p><p>=E5=A4=9A=E4=B8=AA=E7=B2=
+=BE=E7=A1=AE=E5=8C=B9=E9=85=8D</p><p>select dt from chengdao_inceptor where=
+ <strong>contains(dt, &quot;term '9223370633649793807'&quot;) and contains(=
+hphm, &quot;term '=E9=B2=81P56729'&quot;)</strong> =C2=A0order by dt limit =
+100;</p><p><span style=3D"color: rgb(255,0,0);">=E6=B3=A8=E6=84=8F=EF=BC=9A=
+=E8=BF=99=E9=87=8C=E4=B8=8D=E8=A6=81=E5=AF=B9=E9=9D=9Estring=E7=B1=BB=E5=9E=
+=8B=E8=BF=9B=E8=A1=8C=E6=A8=A1=E7=B3=8A=E3=80=81=E5=89=8D=E7=BC=80=E3=80=81=
+=E6=AD=A3=E5=88=99=E7=AD=89=E6=9F=A5=E8=AF=A2=E3=80=82=E5=A6=82=E6=9E=9C=E6=
+=98=AF=E5=AF=B9=E6=95=B0=E5=AD=97=E7=B1=BB=E5=9E=8B=E7=9A=84=E8=BF=9B=E8=A1=
+=8C=E8=8C=83=E5=9B=B4=E6=9F=A5=E8=AF=A2=EF=BC=8C=E5=88=99=E4=B8=80=E5=AE=9A=
+=E6=B3=A8=E6=84=8F=E4=B8=80=E5=AE=9A=E6=98=AF#b=E6=89=8D=E5=8F=AF=E4=BB=A5=
+=E3=80=82</span></p><p>=E8=8C=83=E5=9B=B4=E6=9D=A1=E4=BB=B6</p><p>select dt=
+ from chengdao_inceptor where <strong>contains(dt, &quot;&lt;=3D '922337064=
+7735474807'&quot;) and contains(hphm, &quot;term'=E9=B2=81D0H795'&quot;)</s=
+trong> order by dt limit 100;</p><p>=E6=AD=A3=E5=88=99=E8=A1=A8=E8=BE=BE=E5=
+=BC=8F(regexp)</p><p>select dt from chengdao_inceptor where contains(hphm, =
+<strong>&quot;regexp 's.*y'&quot;</strong>);</p><p>in=E8=A1=A8=E8=BE=BE=E5=
+=BC=8F(in)</p><p>select dt from chengdao_inceptor where contains(hphm, <str=
+ong>&quot;in '=E9=B2=81D0H795,=E9=B2=81D528E8,=E9=B2=81DT4,=E9=B2=81DTXXX,=
+=E9=B2=81DT4058'&quot;</strong>);</p><p>=E8=8C=83=E5=9B=B4=E8=A1=A8=E8=BE=
+=BE=E5=BC=8F(range)</p><p>select dt from chengdao_inceptor where contains(h=
+phm, <strong>&quot;range '[9223370647735474807,9223370647735478807]'&quot;<=
+/strong>);<br />select dt from chengdao_inceptor where contains(hphm, <stro=
+ng>&quot;range '(9223370647735474807,9223370647735478807]'&quot;</strong>);=
+<br />select dt from chengdao_inceptor where contains(hphm, <strong>&quot;r=
+ange '(9223370647735474807,9223370647735478807)'&quot;</strong>);<br />sele=
+ct dt from chengdao_inceptor where contains(hphm, <strong>&quot;range '[922=
+3370647735474807,9223370647735478807)'&quot;</strong>);</p><p>=C2=A0</p><p>=
+=C2=A0</p><p>=E7=9B=AE=E5=89=8D=E7=9A=84=E9=99=90=E5=88=B6=EF=BC=9A</p><p>1=
+.=E5=8F=AA=E6=94=AF=E6=8C=81local mode=EF=BC=8C=E5=9C=A8=E9=9D=9Elocal mode=
+=E4=B8=8B=E8=BF=90=E8=A1=8C=E7=9B=B4=E6=8E=A5=E6=8A=A5=E9=94=99=E3=80=82</p=
+><p>2.=E5=8F=AA=E6=94=AF=E6=8C=81=E6=AD=A3=E5=BA=8F=E6=8E=92=E5=BA=8F(todo)=
+=E3=80=82</p><p>3.=E5=AF=B9OR=E6=9D=A1=E4=BB=B6=EF=BC=8C=E4=B8=8D=E6=94=AF=
+=E6=8C=81=E4=B8=8E=E9=9D=9Esearch=E6=9D=A1=E4=BB=B6=E7=9A=84=E6=B7=B7=E7=94=
+=A8=EF=BC=8C=E5=A6=82=E4=BD=A0=E4=B8=8D=E8=83=BD=E5=86=99contains(hphm, &qu=
+ot;=3D 'xxx'&quot;) or yyyy =3D &quot;yyyy&quot;=EF=BC=9B=E5=AF=B9AND=E6=9D=
+=A1=E4=BB=B6=E6=97=A0=E6=AD=A4=E9=99=90=E5=88=B6=EF=BC=8C=E4=BD=A0=E5=8F=AF=
+=E4=BB=A5=E5=86=99contains(hphm, &quot;=3D 'xxx'&quot;) and yyyy =3D &quot;=
+yyyy&quot;=EF=BC=8C=E4=BC=9A=E4=BD=BF=E7=94=A8search=E6=9D=A1=E4=BB=B6=E3=
+=80=82</p><p>4.=E5=A6=82=E6=9E=9Csearch=E6=9D=A1=E4=BB=B6=E6=B6=89=E5=8F=8A=
+=E7=9A=84=E5=88=97=E4=B8=8D=E5=9C=A8=E5=85=A8=E6=96=87=E7=B4=A2=E5=BC=95=E4=
+=B8=AD=EF=BC=8C=E4=BC=9A=E7=9B=B4=E6=8E=A5=E6=8A=A5=E9=94=99=E3=80=82</p><p=
+>5.<strong>=E4=BD=BF=E7=94=A8=E8=8C=83=E5=9B=B4=E8=A1=A8=E8=BE=BE=E5=BC=8F=
+=E6=AF=94&lt;=3D xxx and &gt;=3D xxx=E5=A5=BD</strong>,=E5=A6=82=E6=8E=A8=
+=E8=8D=90=E4=BD=BF=E7=94=A8(dt, &quot;range '[1234,5678]'&quot;,=E4=B8=8D=
+=E6=8E=A8=E8=8D=90=E4=BD=BF=E7=94=A8(dt,&quot;&lt;=3D'5678' and &gt;=3D'123=
+4'&quot;).</p><p>6.<strong>=E4=BD=BF=E7=94=A8in=E8=A1=A8=E8=BE=BE=E5=BC=8F=
+=E6=AF=94=E4=BD=BF=E7=94=A8=E5=A4=9A=E4=B8=AAor=E8=A1=A8=E8=BE=BE=E5=BC=8F=
+=E5=A5=BD</strong>,=E5=A6=82=E6=8E=A8=E8=8D=90=E4=BD=BF=E7=94=A8(hphm,&quot=
+;in '1234,5678,9011'&quot;),=E4=B8=8D=E6=8E=A8=E8=8D=90=E4=BD=BF=E7=94=A8(h=
+phm,&quot;term '1234' or term'5678' or term'9011'&quot;).</p><p>=C2=A0</p><=
+h2 id=3D"HBase%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2-%E5%85%AD.rebuild_fullte=
+xt_index%E5%8A%A0%E9%80%9F">=E5=85=AD.rebuild_fulltext_index=E5=8A=A0=E9=80=
+=9F</h2><p>=E5=A6=82hbase=E8=A1=A8=E6=95=B0=E6=8D=AE=E9=87=8F=E9=9D=9E=E5=
+=B8=B8=E5=A4=A7=EF=BC=8Crebuild_fulltext_index=E7=9A=84=E8=BF=87=E7=A8=8B=
+=E4=BC=9A=E8=80=97=E6=97=B6=E8=BE=83=E9=95=BF=EF=BC=8C=E5=8F=AF=E4=BB=A5=E9=
+=80=9A=E8=BF=87=E8=B0=83=E6=95=B4elasticsearch=E7=9A=84=E5=87=A0=E4=B8=AA=
+=E5=8F=82=E6=95=B0=E5=8A=A0=E9=80=9F=EF=BC=8C=E5=81=87=E8=AE=BEelasticsearc=
+h=E8=8A=82=E7=82=B9=E5=9C=A8=E6=9C=AC=E6=9C=BA=E4=B8=8A=EF=BC=8C=E7=B4=A2=
+=E5=BC=95=E5=90=8D=E7=A7=B0=E4=B8=BA${indexName}=EF=BC=9A</p><p>system=E7=
+=BA=A7=E5=88=AB=E5=8F=82=E6=95=B0=EF=BC=9A<br /> curl -XPUT '<a href=3D"htt=
+p://localhost:9200/_cluster/settings" class=3D"external-link" rel=3D"nofoll=
+ow">localhost:9200/_cluster/settings</a>' -d '<br /> {<br />=C2=A0 =C2=A0 &=
+quot;persistent&quot; : {<br />=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;indices.st=
+ore.throttle.max_bytes_per_sec&quot; : &quot;100mb&quot;, // es=E5=9C=A8mer=
+ge=E8=BF=87=E7=A8=8B=E4=B8=AD=E5=AF=B9=E7=A3=81=E7=9B=98=E8=AF=BB=E5=86=99=
+=E5=90=9E=E5=90=90=E7=9A=84=E9=99=90=E5=88=B6=EF=BC=8C=E9=BB=98=E8=AE=A420M=
+B=EF=BC=8C=E5=9C=A8=E5=BB=BA=E7=B4=A2=E5=BC=95=E8=BF=87=E7=A8=8B=E4=B8=AD=
+=E5=8F=AF=E4=BB=A5=E4=B8=B4=E6=97=B6=E8=B0=83=E5=A4=A7=EF=BC=8C=E5=A6=82=E6=
+=9E=9C=E4=BD=BF=E7=94=A8ssd=E5=8F=AF=E4=BB=A5=E8=80=83=E8=99=91=E6=B0=B8=E4=
+=B9=85=E8=B0=83=E5=A4=A7</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;threadpool=
+.bulk.queue_size&quot; : 500 // es=E8=8A=82=E7=82=B9=E6=8E=A5=E5=8F=97=E5=
+=BB=BA=E7=B4=A2=E5=BC=95=E8=AF=B7=E6=B1=82=E7=9A=84=E9=98=9F=E5=88=97=E9=95=
+=BF=E5=BA=A6=EF=BC=8C=E9=BB=98=E8=AE=A450<br />=C2=A0 =C2=A0 }<br /> }'</p>=
+<p>index=E7=BA=A7=E5=88=AB=EF=BC=9A<br /> curl -XPUT '<a rel=3D"nofollow">l=
+ocalhost:9200/${indexName}/_settings</a>' -d '<br /> {<br />=C2=A0 =C2=A0 &=
+quot;index&quot; : {<br />=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;refresh_interva=
+l&quot; : 30000 =C2=A0// =E4=B8=BA=E4=BA=86=E4=BF=9D=E8=AF=81=E6=95=B0=E6=
+=8D=AE=E5=AE=9E=E6=97=B6=E6=80=A7=EF=BC=8Ces=E4=BC=9A=E5=AE=9A=E6=9C=9F=E5=
+=AF=B9=E7=B4=A2=E5=BC=95=E8=BF=9B=E8=A1=8Cflush=E6=93=8D=E4=BD=9C=EF=BC=8C=
+=E9=BB=98=E8=AE=A41s=EF=BC=8C=E5=BB=BA=E7=B4=A2=E5=BC=95=E8=BF=87=E7=A8=8B=
+=E4=B8=AD=E5=8F=AF=E4=BB=A5=E6=94=B9=E6=88=9030s<br />=C2=A0 =C2=A0 }<br />=
+ }'</p><p>=E5=BB=BA=E7=B4=A2=E5=BC=95=E5=AE=8C=E6=88=90=E5=90=8E=E5=81=9A=
+=E4=B8=80=E4=B8=8Boptimize=EF=BC=9A</p><p>curl -XPOST '<a class=3D"http" re=
+l=3D"nofollow">http://localhost:9200/${indexName}/_optimize?max_num_segment=
+s=3D5</a>'</p><p>=E5=80=BC=E5=BE=97=E6=B3=A8=E6=84=8F=E7=9A=84=E6=98=AFelas=
+ticsearch=E9=87=8Coptimize=E7=9A=84=E9=BB=98=E8=AE=A4=E7=BA=BF=E7=A8=8B=E6=
+=95=B0=E6=98=AF1=EF=BC=8C=E4=B8=BA=E4=BA=86=E5=8A=A0=E9=80=9Foptimize=E5=8F=
+=AF=E4=BB=A5=E4=B8=B4=E6=97=B6=E5=B0=86=E8=AF=A5=E9=85=8D=E7=BD=AE=E5=A2=9E=
+=E5=A4=A7=EF=BC=9A</p><p>curl -XPUT '<a href=3D"http://localhost:9200/_clus=
+ter/settings" class=3D"external-link" rel=3D"nofollow">localhost:9200/_clus=
+ter/settings</a>' -d '<br />{<br />=C2=A0 =C2=A0 &quot;persistent&quot; : {=
+<br />=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;threadpool.optimize.size&quot; : 5 =
+// es=E6=AF=8F=E4=B8=AAnode=E4=BC=9A=E5=90=8C=E6=97=B6=E8=A7=A6=E5=8F=915=
+=E4=B8=AAshard=E5=81=9Aoptimize<br />=C2=A0 =C2=A0 }<br />}'</p><p>=C2=A0</=
+p><p>=E5=81=9A=E5=AE=8Coptimize=E5=90=8E=EF=BC=8C=E8=AF=B7=E6=8A=8A=E5=A6=
+=82=E4=B8=8A=E5=8F=82=E6=95=B0=E6=94=B9=E5=9B=9E=E9=BB=98=E8=AE=A4=E5=80=BC=
+=EF=BC=8C=E4=BB=A5=E5=85=8D=E6=AD=A3=E5=B8=B8=E4=BD=BF=E7=94=A8=E7=9A=84=E8=
+=BF=87=E7=A8=8B=E4=B8=AD=E6=A3=80=E7=B4=A2=E6=9C=8D=E5=8A=A1=E5=8F=97=E5=88=
+=B0=E5=BD=B1=E5=93=8D=E3=80=82</p><p>curl -XPUT '<a href=3D"http://localhos=
+t:9200/_cluster/settings" class=3D"external-link" rel=3D"nofollow">localhos=
+t:9200/_cluster/settings</a>' -d '<br />{<br />=C2=A0 =C2=A0 &quot;persiste=
+nt&quot; : {<br />=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;indices.store.throttle.=
+max_bytes_per_sec&quot; : &quot;20mb&quot;,=C2=A0</p><p>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &quot;threadpool.bulk.queue_size&quot; : 50,</p><p>=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0=C2=A0&quot;threadpool.optimize.size&quot; : 1<br />=C2=A0 =
+=C2=A0 }<br />}'</p><p>curl -XPUT '<a rel=3D"nofollow">localhost:9200/${ind=
+exName}/_settings</a>' -d '<br />{<br />=C2=A0 =C2=A0 &quot;index&quot; : {=
+<br />=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;refresh_interval&quot; : 1000<br />=
+=C2=A0 =C2=A0 }<br />}'</p><p>=C2=A0</p><p>=E5=9C=A8=E5=A4=A7=E6=95=B0=E6=
+=8D=AE=E9=87=8F=E6=89=B9=E9=87=8F=E5=BB=BA=E7=B4=A2=E5=BC=95=E6=97=B6=EF=BC=
+=8C=E6=88=91=E4=BB=AC=E5=BE=80=E5=BE=80=E5=B0=86=E7=B4=A2=E5=BC=95=E7=9A=84=
+=E5=89=AF=E6=9C=AC=E6=95=B0=E8=AE=BE=E7=BD=AE=E4=B8=BA0=EF=BC=8C=E5=9C=A8=
+=E5=AE=8C=E6=88=90optimize=E5=90=8E=E5=86=8D=E8=AE=BE=E7=BD=AE=E9=9C=80=E8=
+=A6=81=E7=9A=84=E5=89=AF=E6=9C=AC=E6=95=B0=EF=BC=8C=E7=B4=A2=E5=BC=95=E7=9A=
+=84=E5=89=AF=E6=9C=AC=E6=95=B0=E9=80=9A=E8=BF=87=E5=A6=82=E4=B8=8B=E5=91=BD=
+=E4=BB=A4=E5=90=8C=E6=80=81=E8=AE=BE=E7=BD=AE=EF=BC=9A</p><p>curl -XPUT 'lo=
+calhost:9200/${indexName}/_settings' -d '</p><p>{</p><p>=C2=A0 =C2=A0 &quot=
+;index&quot; :=C2=A0{</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0&quot;number_o=
+f_replicas&quot; : 1</p><p>=C2=A0 =C2=A0 }</p><p>}</p><p>'</p><p>es=E9=80=
+=9A=E8=BF=87recovery=E6=9C=BA=E5=88=B6=E5=B0=86=E7=B4=A2=E5=BC=95=E7=9A=84=
+=E5=89=AF=E6=9C=AC=E6=95=B0=E8=A1=A5=E8=B6=B3=EF=BC=8Crecovery=E6=98=AF=E6=
+=9C=89=E9=99=90=E9=80=9F=E7=9A=84=EF=BC=8C=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=
+=87=E5=A6=82=E4=B8=8B=E5=91=BD=E4=BB=A4=E6=9A=82=E6=97=B6=E5=B0=86recovery=
+=E9=99=90=E9=80=9F=E8=B0=83=E5=A4=A7=EF=BC=9A</p><p>curl -XPUT '<a href=3D"=
+http://localhost:9200/_cluster/settings" class=3D"external-link" rel=3D"nof=
+ollow">localhost:9200/_cluster/settings</a>' -d '</p><p>{</p><p>=C2=A0 =C2=
+=A0 &quot;persistent&quot; : {</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;indi=
+ces.recovery.max_bytes_per_sec&quot; : &quot;100mb&quot; // =E9=BB=98=E8=AE=
+=A420mb</p><p>=C2=A0 =C2=A0 }</p><p>}'</p><p>=C2=A0</p><p>=E5=90=8C=E6=97=
+=B6=EF=BC=8C=E5=9C=A8hbase=E8=A1=A8=E8=BE=83=E5=A4=A7=E7=9A=84=E6=83=85=E5=
+=86=B5=E4=B8=8B=EF=BC=8C=E5=8F=AF=E4=BB=A5=E4=BD=BF=E7=94=A8hbase=E7=9A=84s=
+napshot reader=E5=8A=A0=E9=80=9F=E5=BB=BA=E7=B4=A2=E5=BC=95=E8=BF=87=E7=A8=
+=8B=EF=BC=8C=E5=9C=A8hbase-site.conf=E4=B8=AD=E5=8A=A0=E5=85=A5=E5=A6=82=E4=
+=B8=8B=E9=85=8D=E7=BD=AE=EF=BC=9A</p><p>&lt;property&gt;</p><p>=C2=A0 =C2=
+=A0 &lt;name&gt;transwarp.secondaryindex.usesnapshot&lt;/name&gt;</p><p>=C2=
+=A0 =C2=A0 &lt;value&gt;true&lt;/value&gt;</p><p>&lt;/property&gt;</p><p>=
+=C2=A0</p><h2 id=3D"HBase%E5%85%A8%E6%96%87%E6%A3%80%E7%B4%A2-%E4%B8%83.%E5=
+%81%9C%E6%AD%A2elasticsearch%E9%9B%86%E7%BE%A4">=E4=B8=83.=E5=81=9C=E6=AD=
+=A2elasticsearch=E9=9B=86=E7=BE=A4</h2><p>elasticsearch=E6=9C=89=E8=87=AA=
+=E5=B7=B1=E7=9A=84shutdown=E5=91=BD=E4=BB=A4=EF=BC=8C=E5=8C=85=E6=8B=AC=E5=
+=A6=82=E4=B8=8B=E5=87=A0=E7=B1=BB=EF=BC=9A</p><p>1.shutdown=E6=9C=AC=E6=9C=
+=BA=E8=8A=82=E7=82=B9</p><p>curl -XPOST '<a href=3D"http://localhost:9200/_=
+cluster/nodes/_local/_shutdown" class=3D"external-link" rel=3D"nofollow">ht=
+tp://localhost:9200/_cluster/nodes/_local/_shutdown</a>'</p><p>2.shutdown=
+=E5=A4=9A=E4=B8=AA=E8=8A=82=E7=82=B9</p><p>curl -XPOST '<a href=3D"http://l=
+ocalhost:9200/_cluster/nodes/nodeId1,nodeId2/_shutdown" class=3D"external-l=
+ink" rel=3D"nofollow">http://localhost:9200/_cluster/nodes/nodeId1,nodeId2/=
+_shutdown</a>'</p><p>3.shutdown master=E8=8A=82=E7=82=B9</p><p>curl -XPOST =
+'<a href=3D"http://localhost:9200/_cluster/nodes/_master/_shutdown" class=
+=3D"external-link" rel=3D"nofollow">http://localhost:9200/_cluster/nodes/_m=
+aster/_shutdown</a>'</p><p>4.shutdown=E6=95=B4=E4=B8=AA=E9=9B=86=E7=BE=A4</=
+p><p>=C2=A0$ curl -XPOST '<a class=3D"external-link" href=3D"http://localho=
+st:9200/_shutdown" title=3D"http://localhost:9200/_shutdown" rel=3D"nofollo=
+w">http://localhost:9200/_shutdown</a>'</p><p>=C2=A0$ curl -XPOST '<a class=
+=3D"external-link" href=3D"http://localhost:9200/_cluster/nodes/_shutdown" =
+title=3D"http://localhost:9200/_cluster/nodes/_shutdown" rel=3D"nofollow">h=
+ttp://localhost:9200/_cluster/nodes/_shutdown</a>'</p><p>=C2=A0$ curl -XPOS=
+T '<a class=3D"external-link" href=3D"http://localhost:9200/_cluster/nodes/=
+_all/_shutdown" title=3D"http://localhost:9200/_cluster/nodes/_all/_shutdow=
+n" rel=3D"nofollow">http://localhost:9200/_cluster/nodes/_all/_shutdown</a>=
+'</p><p>=E6=B3=A8=E6=84=8F=EF=BC=9A=E5=B0=BD=E9=87=8F=E4=B8=8D=E8=A6=81=E7=
+=9B=B4=E6=8E=A5=E5=8E=BB=E5=81=9C=E6=AD=A2elasticsearch=E8=8A=82=E7=82=B9=
+=EF=BC=8C=E5=BA=94=E8=AF=A5=E4=BD=BF=E7=94=A8=E5=91=BD=E4=BB=A4=E5=8E=BB=E5=
+=81=9C=E6=AD=A2=E3=80=82</p><p>=C2=A0</p><p>=E5=A6=82=E6=9E=9C=E5=81=9C=E6=
+=AD=A2=E9=9B=86=E7=BE=A4=E5=89=8D=E6=AD=A3=E5=9C=A8=E5=85=A5=E5=BA=93=EF=BC=
+=8C=E5=BB=BA=E8=AE=AE=E5=85=88=E5=81=9C=E6=AD=A2=E5=85=A5=E5=BA=93=EF=BC=8C=
+=E5=B9=B6=E5=81=9A=E4=B8=80=E6=AC=A1flush=E6=93=8D=E4=BD=9C=EF=BC=8C=E5=86=
+=8D=E5=81=9C=E9=9B=86=E7=BE=A4=EF=BC=8C=E8=BF=99=E4=BC=9A=E8=AE=A9=E4=BD=A0=
+=E7=9A=84=E9=9B=86=E7=BE=A4=E5=90=AF=E5=8A=A8=E5=BE=97=E6=9B=B4=E5=BF=AB=E3=
+=80=82</p><p><span class=3D"pln" style=3D"color: rgb(0,0,0);">POST </span><=
+span class=3D"pun" style=3D"color: rgb(102,102,0);">/</span><span class=3D"=
+pln" style=3D"color: rgb(0,0,0);">_flush</span><span class=3D"pun" style=3D=
+"color: rgb(102,102,0);">?</span><span class=3D"pln" style=3D"color: rgb(0,=
+0,0);">wait_for_ongoing</span></p><p>=C2=A0</p><h2 id=3D"HBase%E5%85%A8%E6%=
+96%87%E6%A3%80%E7%B4%A2-%E5%85%AB.%E6%9D%A5%E8%87%AAElasticsearch%E7%9A%84%=
+E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5">=E5=85=AB.=E6=9D=A5=E8=87=AAElasticsea=
+rch=E7=9A=84=E5=B8=B8=E7=94=A8=E9=93=BE=E6=8E=A5</h2><p>=E6=AD=A3=E5=88=99=
+=E8=A1=A8=E8=BE=BE=E5=BC=8F=EF=BC=9A<a href=3D"https://www.elastic.co/guide=
+/en/elasticsearch/reference/current/query-dsl-regexp-query.html" class=3D"e=
+xternal-link" rel=3D"nofollow">https://www.elastic.co/guide/en/elasticsearc=
+h/reference/current/query-dsl-regexp-query.html</a></p><p>Aggregation=EF=BC=
+=9A<a href=3D"https://www.elastic.co/guide/en/elasticsearch/reference/curre=
+nt/search-aggregations.html#search-aggregations" class=3D"external-link" re=
+l=3D"nofollow">https://www.elastic.co/guide/en/elasticsearch/reference/curr=
+ent/search-aggregations.html#search-aggregations</a></p><p>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0<a hre=
+f=3D"https://www.elastic.co/blog/intro-to-aggregations" class=3D"external-l=
+ink" rel=3D"nofollow">https://www.elastic.co/blog/intro-to-aggregations</a>=
+</p><p>Shard query cache :=C2=A0<a href=3D"https://www.elastic.co/guide/en/=
+elasticsearch/reference/current/index-modules-shard-query-cache.html" class=
+=3D"external-link" rel=3D"nofollow">https://www.elastic.co/guide/en/elastic=
+search/reference/current/index-modules-shard-query-cache.html</a></p><p>Cle=
+ar cache :=C2=A0<a href=3D"https://www.elastic.co/guide/en/elasticsearch/re=
+ference/current/indices-clearcache.html" class=3D"external-link" rel=3D"nof=
+ollow">https://www.elastic.co/guide/en/elasticsearch/reference/current/indi=
+ces-clearcache.html</a></p><p>Directory Layout :=C2=A0<a href=3D"https://ww=
+w.elastic.co/guide/en/elasticsearch/reference/current/setup-dir-layout.html=
+" class=3D"external-link" rel=3D"nofollow">https://www.elastic.co/guide/en/=
+elasticsearch/reference/current/setup-dir-layout.html</a>=C2=A0(</p><p>=C2=
+=A0 =E5=BD=93es=E4=BD=BF=E7=94=A8=E5=A4=9A=E5=9D=97=E6=9C=AC=E5=9C=B0=E7=A3=
+=81=E7=9B=98=E6=97=B6=E7=9A=84=E9=80=89=E6=8B=A9=E7=AD=96=E7=95=A5=EF=BC=8C=
+<span style=3D"color: rgb(85,85,85);">least_used(=E9=BB=98=E8=AE=A4=E5=80=
+=BC)=E9=80=89=E6=8B=A9=E5=BD=93=E5=89=8D=E5=8F=AF=E7=94=A8=E7=A3=81=E7=9B=
+=98=E5=AE=B9=E9=87=8F=E6=9C=80=E5=A4=A7=E7=9A=84=EF=BC=8C<span style=3D"col=
+or: rgb(85,85,85);">random=E6=A0=B9=E6=8D=AE=E5=BD=93=E5=89=8D=E7=A3=81=E7=
+=9B=98=E5=89=A9=E4=BD=99=E5=AE=B9=E9=87=8F=E8=BF=9B=E8=A1=8C=E5=B8=A6=E6=9D=
+=83=E9=9A=8F=E6=9C=BA=E3=80=82</span></span></p><p><span style=3D"color: rg=
+b(85,85,85);"><span style=3D"color: rgb(85,85,85);">=C2=A0 =E4=BE=8B=E5=AD=
+=90=EF=BC=9A=E5=9C=A8=E5=A4=A7=E5=94=90=E7=9A=84=E6=B5=8B=E8=AF=95=E4=B8=AD=
+=EF=BC=8C=E4=B8=80=E5=8F=B0=E6=9C=BA=E5=99=A8=E5=8F=AA=E6=9C=89=E4=B8=A4=E5=
+=9D=97=E7=A3=81=E7=9B=98=EF=BC=8C=E4=B8=94=E4=B8=80=E5=9D=97=E7=9B=98=E6=AF=
+=94=E5=8F=A6=E4=B8=80=E5=9D=97=E5=B0=8F=E5=87=A0=E7=99=BEG=EF=BC=8C=E9=BB=
+=98=E8=AE=A4=E7=9A=84=E9=80=89=E6=8B=A9=E7=AD=96=E7=95=A5=E5=B0=86=E6=89=80=
+=E6=9C=89=E6=95=B0=E6=8D=AE=E9=83=BD=E5=86=99=E5=88=B0=E4=BA=86=E4=B8=80=E5=
+=9D=97=E7=A3=81=E7=9B=98=E4=B8=8A=EF=BC=8C=E4=B8=BA=E4=BA=86=E5=85=A5=E5=BA=
+=93=E6=80=A7=E8=83=BD=EF=BC=8C=E9=9C=80=E8=A6=81=E5=B0=86=E9=80=89=E6=8B=A9=
+=E7=AD=96=E7=95=A5=E6=94=B9=E4=B8=BArandom=E3=80=82</span></span></p><p>)</=
+p><p>Merge=E7=AD=96=E7=95=A5=EF=BC=9A<a href=3D"https://www.elastic.co/guid=
+e/en/elasticsearch/reference/current/index-modules-merge.html" class=3D"ext=
+ernal-link" rel=3D"nofollow">https://www.elastic.co/guide/en/elasticsearch/=
+reference/current/index-modules-merge.html</a></p><p>Translog=EF=BC=9A<a hr=
+ef=3D"https://www.elastic.co/guide/en/elasticsearch/reference/current/index=
+-modules-translog.html" class=3D"external-link" rel=3D"nofollow">https://ww=
+w.elastic.co/guide/en/elasticsearch/reference/current/index-modules-translo=
+g.html</a>=C2=A0=E5=9C=A8=E5=AF=B9=E5=85=A5=E5=BA=93=E6=80=A7=E8=83=BD=E8=
+=A6=81=E6=B1=82=E6=9E=81=E9=AB=98=E7=9A=84=E6=83=85=E5=86=B5=E4=B8=8B=EF=BC=
+=8C=E5=B0=86<span style=3D"color: rgb(85,85,85);">index.gateway.local.sync=
+=E8=AE=BE=E4=B8=BA-1=EF=BC=8Cdisable=E6=8E=89translog sync=E6=9C=AC=E5=9C=
+=B0=E7=A3=81=E7=9B=98=E7=9A=84=E6=93=8D=E4=BD=9C=E3=80=82</span></p><p>flus=
+h=EF=BC=9A<a href=3D"https://www.elastic.co/guide/en/elasticsearch/referenc=
+e/current/indices-flush.html" class=3D"external-link" rel=3D"nofollow">http=
+s://www.elastic.co/guide/en/elasticsearch/reference/current/indices-flush.h=
+tml</a></p><p>Monitoring Individual Nodes=EF=BC=9A<a href=3D"https://www.el=
+astic.co/guide/en/elasticsearch/guide/current/_monitoring_individual_nodes.=
+html" class=3D"external-link" rel=3D"nofollow">https://www.elastic.co/guide=
+/en/elasticsearch/guide/current/_monitoring_individual_nodes.html</a>=C2=A0=
+=EF=BC=88=E5=90=84=E7=A7=8D=E8=8A=82=E7=82=B9=E7=8A=B6=E6=80=81=E4=BF=A1=E6=
+=81=AF=EF=BC=89</p><p>=E5=8A=A0=E9=80=9F=E6=89=B9=E9=87=8F=E5=BB=BA=E7=B4=
+=A2=E5=BC=95=E7=9A=84tips=EF=BC=9A<a href=3D"https://www.elastic.co/guide/e=
+n/elasticsearch/guide/current/indexing-performance.html" class=3D"external-=
+link" rel=3D"nofollow">https://www.elastic.co/guide/en/elasticsearch/guide/=
+current/indexing-performance.html</a></p><p>Analysis=EF=BC=9A=C2=A0<a href=
+=3D"https://www.elastic.co/guide/en/elasticsearch/reference/current/analysi=
+s.html" class=3D"external-link" rel=3D"nofollow">https://www.elastic.co/gui=
+de/en/elasticsearch/reference/current/analysis.html</a>=C2=A0=EF=BC=88</p><=
+p>=E6=AF=94=E5=A6=82=E8=AF=B4=E6=88=91=E6=83=B3=E6=8A=8A=E8=A1=A8=E4=B8=AD=
+=E4=B8=80=E4=B8=AA=E8=A6=81=E6=8E=92=E5=BA=8F=E7=9A=84=E5=AD=97=E6=AE=B5=E7=
+=9B=B4=E6=8E=A5=E6=94=BE=E5=88=B0payload=E9=87=8C=EF=BC=8C=E5=88=99=E6=88=
+=91=E5=8F=AF=E4=BB=A5=E5=AE=9A=E4=B9=89=E4=B8=80=E4=B8=AA=E5=90=8D=E5=8F=AB=
+payloads=E7=9A=84Analyzer=EF=BC=8C=E4=B8=BA=E5=85=B6=E6=8C=87=E5=AE=9A=E4=
+=B8=80=E4=B8=AAdelimiter=E4=B8=BA&quot;|&quot;=EF=BC=8Cencoding=E4=B8=BAide=
+ntity=E7=9A=84TokenFilter=EF=BC=8C=E5=8F=AF=E4=BB=A5=E9=85=8D=E7=BD=AE=E4=
+=B8=80=E4=B8=AA=E7=B3=BB=E7=BB=9F=E7=BA=A7=E7=9A=84analyzer(=E5=9C=A8elasti=
+csearch.yml=E4=B8=AD)=EF=BC=9A</p><p>index:</p><p>=C2=A0 analysis:</p><p>=
+=C2=A0 =C2=A0 analyzer:</p><p><span style=3D"line-height: 1.4285715;backgro=
+und-color: transparent;">=C2=A0 =C2=A0 =C2=A0 payload:</span></p><p><span s=
+tyle=3D"line-height: 1.4285715;background-color: transparent;">=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 type: custom</span></p><p><span style=3D"line-height: 1.4=
+285715;background-color: transparent;">=C2=A0 =C2=A0 =C2=A0 =C2=A0 tokenize=
+r: whitespace</span></p><p><span style=3D"line-height: 1.4285715;background=
+-color: transparent;">=C2=A0 =C2=A0 =C2=A0 =C2=A0 filter: tdhTokenFilter</s=
+pan></p><p><span style=3D"line-height: 1.4285715;background-color: transpar=
+ent;">=C2=A0 =C2=A0 filter:</span></p><p><span style=3D"line-height: 1.4285=
+715;background-color: transparent;">=C2=A0 =C2=A0 =C2=A0 tdhTokenFilter:</s=
+pan></p><p><span style=3D"line-height: 1.4285715;background-color: transpar=
+ent;">=C2=A0 =C2=A0 =C2=A0 =C2=A0 type: delimited_payload_filter</span></p>=
+<p><span style=3D"line-height: 1.4285715;background-color: transparent;">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 delimiter: &quot;|&quot;</span></p><p><span sty=
+le=3D"line-height: 1.4285715;background-color: transparent;">=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 encoding: &quot;identity&quot; =C2=A0=C2=A0</span></p><p>=E4=
+=B9=9F=E5=8F=AF=E4=BB=A5=E9=85=8D=E7=BD=AE=E4=B8=80=E4=B8=AAindex=E7=BA=A7=
+=E5=88=AB=E7=9A=84analyzer=EF=BC=9A</p><p>curl -XPUT &quot;<a href=3D"http:=
+//localhost:9200/myindex/" class=3D"external-link" rel=3D"nofollow">http://=
+localhost:9200/myindex/</a>&quot; -d'</p><p>{</p><p>=C2=A0 =C2=A0 &quot;set=
+tings&quot;: {</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;analysis&quot;: {</p=
+><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 &quot;analyzer&quot;: {</p><p=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0&quot;payloads&quot=
+;: {</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0&quot;type&quot;: &quot;custom&quot;,</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0&quot;tokenizer&quot;: &quot;w=
+hitespace&quot;,</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0&quot;filter&quot;: [</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0&quot;lowercase&quot=
+;,</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0&quot;delimited_payload_filter&quot;</p><p>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 ]</p><p>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 }</p><p>=C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 }</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0 }</p><p>=C2=A0 =C2=
+=A0 },</p><p>=C2=A0 =C2=A0 &quot;mappings&quot;: {</p><p>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 &quot;mytype&quot;: {</p><p>=C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0=C2=
+=A0 =C2=A0=C2=A0&quot;properties&quot;: {</p><p>=C2=A0 =C2=A0=C2=A0=C2=A0 =
+=C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0&quot;text&quot;: {</p><p=
+>=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=
+=A0=C2=A0 =C2=A0=C2=A0&quot;type&quot;: &quot;string&quot;,</p><p>=C2=A0 =
+=C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0=
+ =C2=A0=C2=A0&quot;analyzer&quot;: &quot;payloads&quot;,</p><p>=C2=A0 =C2=
+=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 =
+=C2=A0=C2=A0&quot;term_vector&quot;: &quot;with_positions_offsets_payloads&=
+quot;</p><p>=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0=
+ =C2=A0=C2=A0}</p><p>=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=
+=A0}</p><p>=C2=A0 =C2=A0=C2=A0=C2=A0 =C2=A0=C2=A0}</p><p>=C2=A0 =C2=A0=C2=
+=A0}</p><p>}'</p><p>=EF=BC=89</p><h2 id=3D"HBase%E5%85%A8%E6%96%87%E6%A3%80=
+%E7%B4%A2-%E9%99%84%E5%BD%95.%E4%B8%80%E4%B8%AA%E5%BB%BA%E7%B4%A2%E5%BC%95%=
+E7%9A%84%E5%AE%9E%E4%BE%8B">=E9=99=84=E5=BD=95.=E4=B8=80=E4=B8=AA=E5=BB=BA=
+=E7=B4=A2=E5=BC=95=E7=9A=84=E5=AE=9E=E4=BE=8B</h2><p>=E4=BB=A5=E6=97=A0=E9=
+=94=A1=E6=89=80=E7=9A=84=E6=B5=8B=E8=AF=95=E6=95=B0=E6=8D=AE=E9=9B=86=E4=B8=
+=BA=E4=BE=8B=EF=BC=8C=E5=85=B6=E5=85=A8=E6=96=87=E7=B4=A2=E5=BC=95=E7=9A=84=
+=E9=85=8D=E7=BD=AE=E5=A6=82=E4=B8=8B=EF=BC=9A</p><p>&quot;fulltextindex&quo=
+t; : {</p><p>=C2=A0 &quot;tableName&quot; : &quot;wuxi_cbo&quot;,</p><p>=C2=
+=A0 &quot;allowUpdate&quot; : true,</p><p>=C2=A0 &quot;ttl&quot; : 0,</p><p=
+>=C2=A0 &quot;source&quot; : true,</p><p>=C2=A0 &quot;all&quot; : false,</p=
+><p>=C2=A0 &quot;fields&quot; : [ {</p><p>=C2=A0 =C2=A0 &quot;family&quot; =
+: &quot;f&quot;,</p><p>=C2=A0 =C2=A0 &quot;qualifier&quot; : &quot;a&quot;,=
+</p><p>=C2=A0 =C2=A0 &quot;attributes&quot; : {</p><p>=C2=A0 =C2=A0 =C2=A0 =
+&quot;index&quot; : &quot;not_analyzed&quot;,</p><p>=C2=A0 =C2=A0 =C2=A0 &q=
+uot;store&quot; : &quot;false&quot;,</p><p>=C2=A0 =C2=A0 =C2=A0 &quot;type&=
+quot; : &quot;string&quot;</p><p>=C2=A0 =C2=A0 }</p><p>=C2=A0 }, {</p><p>=
+=C2=A0 =C2=A0 &quot;family&quot; : &quot;f&quot;,</p><p>=C2=A0 =C2=A0 &quot=
+;qualifier&quot; : &quot;b&quot;,</p><p>=C2=A0 =C2=A0 &quot;attributes&quot=
+; : {</p><p>=C2=A0 =C2=A0 =C2=A0 &quot;index&quot; : &quot;not_analyzed&quo=
+t;,</p><p>=C2=A0 =C2=A0 =C2=A0 &quot;store&quot; : &quot;false&quot;,</p><p=
+>=C2=A0 =C2=A0 =C2=A0 &quot;type&quot; : &quot;string&quot;</p><p>=C2=A0 =
+=C2=A0 }</p><p>=C2=A0 }, {</p><p>=C2=A0 =C2=A0 &quot;family&quot; : &quot;f=
+&quot;,</p><p>=C2=A0 =C2=A0 &quot;qualifier&quot; : &quot;g&quot;,</p><p>=
+=C2=A0 =C2=A0 &quot;attributes&quot; : {</p><p>=C2=A0 =C2=A0 =C2=A0 &quot;i=
+ndex&quot; : &quot;not_analyzed&quot;,</p><p>=C2=A0 =C2=A0 =C2=A0 &quot;sto=
+re&quot; : &quot;false&quot;,</p><p>=C2=A0 =C2=A0 =C2=A0 &quot;type&quot; :=
+ &quot;string&quot;</p><p>=C2=A0 =C2=A0 }</p><p>=C2=A0 }, {</p><p>=C2=A0 =
+=C2=A0 &quot;family&quot; : &quot;f&quot;,</p><p>=C2=A0 =C2=A0 &quot;qualif=
+ier&quot; : &quot;y&quot;,</p><p>=C2=A0 =C2=A0 &quot;encode_as_string&quot;=
+ : false,</p><p>=C2=A0 =C2=A0 &quot;attributes&quot; : {</p><p>=C2=A0 =C2=
+=A0 =C2=A0 &quot;index&quot; : &quot;not_analyzed&quot;,</p><p>=C2=A0 =C2=
+=A0 =C2=A0 &quot;store&quot; : &quot;false&quot;,</p><p>=C2=A0 =C2=A0 =C2=
+=A0 &quot;type&quot; : &quot;long&quot;</p><p>=C2=A0 =C2=A0 }</p><p>=C2=A0 =
+} ],</p><p>=C2=A0 &quot;settings&quot; : {</p><p>=C2=A0 =C2=A0 &quot;index.=
+number_of_replicas&quot; : &quot;0&quot;,</p><p>=C2=A0 =C2=A0 &quot;index.n=
+umber_of_shards&quot; : &quot;12&quot;</p><p>=C2=A0 }</p><p>}</p><p>=E8=AF=
+=A5=E6=B5=8B=E8=AF=95=E6=95=B0=E6=8D=AE=E9=9B=86=E5=85=B17536199=E6=9D=A1=
+=E6=95=B0=E6=8D=AE=EF=BC=8C=E5=9C=A8hbase=E4=B8=AD=E5=8E=8B=E7=BC=A9=E5=90=
+=8E=E6=95=B0=E6=8D=AE=E5=A4=A7=E5=B0=8F=E4=B8=BA506M=EF=BC=8C=E6=A0=B9=E6=
+=8D=AEall=EF=BC=8Csource=E4=B8=8E=E5=90=84=E4=B8=AAfield=E6=98=AF=E5=90=A6s=
+tore=E4=B8=8D=E5=90=8C=EF=BC=8C=E5=BB=BA=E5=87=BA=E6=9D=A5=E7=9A=84=E7=B4=
+=A2=E5=BC=95=E5=A4=A7=E5=B0=8F=E4=B9=9F=E4=B8=8D=E5=90=8C=EF=BC=8C=E4=BB=A5=
+=E4=B8=8B=E4=B8=BA=E7=BB=93=E6=9E=9C=EF=BC=9A</p><p>all=3Dtrue &amp;&amp; s=
+ource=3Dtrue &amp;&amp; all field store=3Dtrue=EF=BC=8C=E7=B4=A2=E5=BC=95=
+=E5=A4=A7=E5=B0=8F=E4=B8=BA1.1G</p><p>all=3Dtrue &amp;&amp; source=3Dtrue &=
+amp;&amp; all field store=3Dfalse=EF=BC=8C=E7=B4=A2=E5=BC=95=E5=A4=A7=E5=B0=
+=8F=E4=B8=BA960M</p><p>all=3Dfalse &amp;&amp; source=3Dtrue &amp;&amp; all =
+field store=3Dfalse=EF=BC=8C=E7=B4=A2=E5=BC=95=E5=A4=A7=E5=B0=8F=E4=B8=BA70=
+0M</p><p>all=3Dfalse &amp;&amp; source=3Dfalse &amp;&amp; all field store=
+=3Dfalse=EF=BC=8C=E7=B4=A2=E5=BC=95=E5=A4=A7=E5=B0=8F=E4=B8=BA534M</p><p>al=
+l=3Dfalse &amp;&amp; source=3Dtrue &amp;&amp; all field store=3Dfalse &amp;=
+&amp; f:y doc_values=3Dtrue=EF=BC=8C=E7=B4=A2=E5=BC=95=E5=A4=A7=E5=B0=8F=E4=
+=B8=BA765M</p><p>=C2=A0</p><p>=C2=A0</p><p>=C2=A0</p><p>=C2=A0</p><p>=C2=A0=
+</p><p>=C2=A0</p><p>=C2=A0</p>    <div class=3D"aui-message hint shadowed i=
+nformation-macro">
+                            <span class=3D"aui-icon icon-hint"></span>
+                <div class=3D"message-content">
+                            <p>=C2=A0</p>
+                    </div>
+    </div>
+    </body>
+</html>
+------=_Part_471_2097106417.1460283302987--
